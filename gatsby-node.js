@@ -11,7 +11,7 @@ exports.createPages = ({ graphql, actions }) => {
           filter: {
             frontmatter: { title: { ne: "null" }, draft: { ne: true } }
           }
-          sort: { fields: [frontmatter___date], order: DESC }
+          sort: { frontmatter: { date: DESC } }
           limit: 1000
         ) {
           edges {
