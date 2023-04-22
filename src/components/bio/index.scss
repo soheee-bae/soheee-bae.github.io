@@ -1,0 +1,70 @@
+@import "../../styles/typography";
+@import "../../styles/colors";
+
+.bioContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 30px 50px;
+}
+
+.bioImage {
+  border: none;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  img {
+    margin: auto;
+    border-radius: 50%;
+    width: 91px !important;
+    height: 91px !important;
+    border: 2px solid var(--lg-lighter-gray);
+    padding: 2px;
+  }
+}
+
+.bioContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3px;
+}
+
+.bioLink {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  width: auto;
+  padding: 5px;
+  color: var(--lg-darkest-gray);
+}
+
+.bioText {
+  font-size: var(--text-base);
+  font-weight: var(--font-normal);
+  line-height: 1.5;
+  margin: 0;
+  padding: 5px;
+  color: var(--lg-dark-gray);
+}
+
+.bioIcons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  padding: 10px 5px 5px;
+
+  svg {
+    opacity: 0.8;
+
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.2s;
+      opacity: 1;
+    }
+  }
+}

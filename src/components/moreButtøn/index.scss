@@ -1,0 +1,25 @@
+.moreButton {
+  color: var(--lg-black);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-sm);
+  background-color: var(--lg-lightest-gray);
+  border: 3px solid transparent;
+  padding: 20px 10px;
+  border-radius: 8px;
+  max-width: 270px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  align-self: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+  text-decoration: none;
+
+  &:hover {
+    border: 3px solid var(--lg-lighter-gray);
+  }
+}

@@ -1,0 +1,25 @@
+.tagsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  border: 1px solid var(--lg-lightest-gray);
+  padding: 5px 15px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: var(--font-normal);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: all 0.3s;
+  color: var(--lg-light-black);
+  &:hover {
+    background-color: var(--lg-darker-white);
+  }
+  &[data-selected="true"] {
+    background-color: var(--lg-darker-white);
+    border: 1px solid var(--lg-darker-white);
+  }
+}

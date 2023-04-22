@@ -1,0 +1,61 @@
+{
+  "name": "gatsby-clean-blog-starter",
+  "private": false,
+  "description": "Gatsby Clean Theme Blog starter",
+  "version": "0.1.0",
+  "author": "SoHee Bae",
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "prettier": "prettier --write \"./**/*.{js,jsx,json,md}\"",
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public ."
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^2.2.1",
+    "@mdx-js/react": "^2.2.1",
+    "babel-plugin-styled-components": "^2.0.7",
+    "clsx": "^1.2.1",
+    "date-fns": "^2.29.3",
+    "gatsby": "^5.5.0",
+    "gatsby-image": "^3.11.0",
+    "gatsby-plugin-image": "^3.6.0",
+    "gatsby-plugin-mdx": "^5.4.0",
+    "gatsby-plugin-offline": "^6.5.0",
+    "gatsby-plugin-sass": "^6.4.0",
+    "gatsby-plugin-sharp": "^5.4.0",
+    "gatsby-plugin-styled-components": "^6.4.0",
+    "gatsby-remark-copy-linked-files": "^6.5.0",
+    "gatsby-remark-emoji": "^0.0.3",
+    "gatsby-remark-images": "^7.4.0",
+    "gatsby-remark-prismjs": "^7.5.0",
+    "gatsby-remark-relative-images": "^2.0.2",
+    "gatsby-remark-responsive-iframe": "^6.5.0",
+    "gatsby-source-filesystem": "^5.4.0",
+    "gatsby-transformer-remark": "^6.4.0",
+    "gatsby-transformer-sharp": "^5.4.0",
+    "node-sass": "^8.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
+    "sass": "^1.57.1",
+    "styled-components": "^5.3.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sohee28/gatsby-clean-blog"
+  },
+  "bugs": {
+    "url": "https://github.com/sohee28/gatsby-clean-blog/issues"
+  },
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "2.8.3"
+  }
+}

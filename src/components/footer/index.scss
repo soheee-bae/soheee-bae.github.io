@@ -1,0 +1,19 @@
+@import "../../styles/size";
+
+.footer {
+  height: $footer-height !important;
+  font-size: var(--text-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lg-dark-gray);
+  background-color: var(--lg-darker-white);
+  width: 100%;
+  a {
+    text-decoration: none;
+    color: var(--lg-light-black);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

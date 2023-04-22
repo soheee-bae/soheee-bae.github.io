@@ -1,0 +1,10 @@
+@import "../styles/size";
+
+.postsContainer {
+  width: $content-max-width;
+  padding: 50px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

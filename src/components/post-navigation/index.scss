@@ -1,0 +1,37 @@
+.postNavigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.postNavButton {
+  cursor: pointer;
+  max-width: 160px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: var(--lg-darker-gray);
+  font-size: var(--text-sm);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  svg {
+    width: 23px;
+    height: 23px;
+    color: var(--lg-darker-gray);
+    stroke-width: 2;
+  }
+
+  &:hover {
+    color: var(--lg-darkest-gray);
+    transform: scale(1.05);
+    transition: all 0.2s;
+  }
+}

@@ -1,0 +1,16 @@
+.themeSwitch {
+  border-radius: 50%;
+  padding: 3px 5px;
+  cursor: pointer;
+  margin-left: -2px;
+  background: none;
+  svg {
+    margin-bottom: -1px;
+  }
+
+  &[data-light="false"] {
+    svg {
+      padding: 5px 2px 0 2px;
+    }
+  }
+}
