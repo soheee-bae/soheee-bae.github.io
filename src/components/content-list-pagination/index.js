@@ -19,7 +19,9 @@ export const ContentListPagination = ({
   return (
     <div>
       <div>
-        <p className="listTitle">Total of {filteredPosts?.length} posts</p>
+        <p className="listTitle">
+          총 {filteredPosts?.length}개의 포스트가 있어요
+        </p>
         {noPosts ? (
           <div className="emptyContainer">There are no posts to display. </div>
         ) : (

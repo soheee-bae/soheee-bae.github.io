@@ -13,7 +13,7 @@ export default function About({ data }) {
     <Layout
       headerImg={aboutPageBackground}
       title="About"
-      subtitle="Everything about me"
+      subtitle={'"Everything about me"'}
     >
       <div className="aboutContainer">
         <Bio />

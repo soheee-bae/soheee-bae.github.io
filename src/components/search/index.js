@@ -16,6 +16,7 @@ export const SearchField = ({ setSearch }) => {
       <Search color="var(--lg-darkest-gray)" />
       <input
         type="text"
+        placeholder="검색어"
         onKeyUp={(e) => {
           typewatch(() => {
             setSearch(e.target.value);

@@ -6,7 +6,7 @@ import "./index.scss";
 export const MoreButton = () => {
   return (
     <a className="moreButton" href="/posts/?category=All">
-      For More
+      더 보기
       <ChevronRightDouble
         width={16}
         height={16}

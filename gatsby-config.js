@@ -4,13 +4,16 @@
 
 module.exports = {
   siteMetadata: {
-    blogName: "My Blog",
+    blogName: "TIL",
 
-    author: "Your Name",
-    bio: "Lorem Ipsum is simply dummy text of the printing and type setting industry.",
+    author: "배소희",
+    bio: "새로운 것을 도전하기 좋아하고 발전을 위해 꾸준히 노력하는 것을 중요하게 생각하는 프론트엔드 개발자 입니다.",
 
     githubUrl: "https://github.com/soheee-bae",
-    blogUrl: "https://soheee-bae.github.io/soheee-bae/",
+    blogUrl: "https://soheee-bae.github.io/",
+    instagramUrl: "https://www.instagram.com/50h333ba3/",
+    emailUrl: "mailto: baesoheee@gmail.com",
+    linkedInUrl: "https://www.linkedin.com/in/sohee-bae-b37a9a166/",
 
     homePageBackground: "workspace_white.jpeg",
     aboutPageBackground: "workspace_white.jpeg",

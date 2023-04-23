@@ -17,8 +17,8 @@ export default function Page({ data }) {
   return (
     <Layout
       headerImg={homePageBackground}
-      title="My Blog"
-      subtitle="Check around my blog!"
+      title="소히의 개발 블로그"
+      subtitle={`"I am still learning."`}
     >
       <div className="homeContainer">
         <Bio />

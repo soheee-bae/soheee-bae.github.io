@@ -3,7 +3,9 @@ import "./index.scss";
 
 export const Footer = () => (
   <footer className="footer">
-    ©<a href="https://github.com/sohee28">sohee28</a>, Built with{" "}
+    <p>©</p>
+    <a href="https://github.com/sohee28">soheee-bae.github.io</a>
+    <p>, Built with Gatsby and </p>
     <a href="https://github.com/soheee-bae/Gatsby-Image-Blog-Starter">
       Gatsby-Image-Blog-Starter
     </a>

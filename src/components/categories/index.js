@@ -37,7 +37,7 @@ const Categories = () => {
           data-selected={selectedCategory === CATEGORY.ALL}
           onClick={() => handleSelect(CATEGORY.ALL)}
         >
-          All
+          전체
         </div>
         {filteredCategories.map((category) => (
           <div

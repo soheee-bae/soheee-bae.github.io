@@ -38,7 +38,7 @@ export default function Posts({ data }) {
     <Layout
       headerImg={postsPageBackground}
       title="Posts"
-      subtitle="Check out all the posts"
+      subtitle={'"Check out all the posts"'}
     >
       <div className="postsContainer">
         <SearchField setSearch={setSearch} />

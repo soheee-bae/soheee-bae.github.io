@@ -11,7 +11,7 @@ import { Github } from "../../../assets/icons/github";
 const Bio = () => {
   const bioQuery = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(relativePath: { regex: "/potato.png/" }) {
+      avatar: file(relativePath: { regex: "/profile.jpeg/" }) {
         childImageSharp {
           fixed(width: 100, height: 100) {
             ...GatsbyImageSharpFixed
@@ -23,11 +23,16 @@ const Bio = () => {
           author
           bio
           githubUrl
+          blogUrl
+          instagramUrl
+          emailUrl
+          linkedInUrl
         }
       }
     }
   `);
-  const { author, bio } = bioQuery.site.siteMetadata;
+  const { author, bio, githubUrl, linkedInUrl, instagramUrl, emailUrl } =
+    bioQuery.site.siteMetadata;
 
   return (
     <div className="bioContainer">
@@ -44,10 +49,18 @@ const Bio = () => {
         </div>
         <p className="bioText">{bio}</p>
         <div className="bioIcons">
-          <Email color="var(--lg-light-black)" />
-          <Github color="var(--lg-light-black)" />
-          <LinkedIn color="var(--lg-light-black)" />
-          <Instagram color="var(--lg-light-black)" />
+          <a href={emailUrl} target="_blank">
+            <Email color="var(--lg-light-black)" />
+          </a>
+          <a href={githubUrl} target="_blank">
+            <Github color="var(--lg-light-black)" />
+          </a>
+          <a href={linkedInUrl} target="_blank">
+            <LinkedIn color="var(--lg-light-black)" />
+          </a>
+          <a href={instagramUrl} target="_blank">
+            <Instagram color="var(--lg-light-black)" />
+          </a>
         </div>
       </div>
     </div>
