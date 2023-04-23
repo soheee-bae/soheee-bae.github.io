@@ -23,7 +23,7 @@ export const ContentListPagination = ({
           총 {filteredPosts?.length}개의 포스트가 있어요
         </p>
         {noPosts ? (
-          <div className="emptyContainer">There are no posts to display. </div>
+          <div className="emptyContainer">검색 결과가 없습니다 🥺</div>
         ) : (
           <>
             {finalPosts.map((post, index) => (

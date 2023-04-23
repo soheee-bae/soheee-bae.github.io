@@ -16,8 +16,8 @@ module.exports = {
     linkedInUrl: "https://www.linkedin.com/in/sohee-bae-b37a9a166/",
 
     homePageBackground: "workspace_white.jpeg",
-    aboutPageBackground: "workspace_white.jpeg",
-    postsPageBackground: "workspace_white.jpeg",
+    aboutPageBackground: "coffee.jpeg",
+    postsPageBackground: "stickyNote.jpeg",
   },
   plugins: [
     {
