@@ -1,5 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
+import Helmet from "react-helmet";
 
 import Bio from "../components/bio";
 import ContentList from "../components/content-list";
@@ -20,6 +21,10 @@ export default function Page({ data }) {
       title="소히의 개발 블로그"
       subtitle={`"I am still learning."`}
     >
+      <Helmet>
+        <title>소히의 개발 블로그</title>
+        <meta name="소히의 개발 블로그" />
+      </Helmet>
       <div className="homeContainer">
         <Bio />
         <hr />

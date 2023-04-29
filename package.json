@@ -27,6 +27,7 @@
     "gatsby-plugin-manifest": "^5.9.0",
     "gatsby-plugin-mdx": "^5.4.0",
     "gatsby-plugin-offline": "^6.5.0",
+    "gatsby-plugin-react-helmet": "^6.9.0",
     "gatsby-plugin-sass": "^6.4.0",
     "gatsby-plugin-sharp": "^5.4.0",
     "gatsby-plugin-styled-components": "^6.4.0",
@@ -42,6 +43,7 @@
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-icons": "^4.7.1",
     "sass": "^1.57.1",
     "styled-components": "^5.3.6"
