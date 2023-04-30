@@ -4,5 +4,5 @@ export const CONTENTITEM = {
   CATEGORY: true,
   ICON: true,
   DATE: true,
-  CONTENT: true,
+  CONTENT: false,
 };
