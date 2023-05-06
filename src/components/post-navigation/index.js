@@ -26,7 +26,7 @@ const PostNavigation = ({ data, selectedCategory }) => {
         {previous && (
           <div className="postNavButton">
             <ChevronLeft />
-            {preTitle}
+            <p>{preTitle}</p>
           </div>
         )}
       </div>
@@ -37,7 +37,7 @@ const PostNavigation = ({ data, selectedCategory }) => {
       >
         {next && (
           <div className="postNavButton">
-            {nextTitle}
+            <p>{nextTitle}</p>
             <ChevronRight />
           </div>
         )}
