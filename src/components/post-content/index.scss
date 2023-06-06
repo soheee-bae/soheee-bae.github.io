@@ -12,16 +12,20 @@
     padding: 15px;
     color: var(--lg-darker-white);
     background-color: var(--lg-light-black);
-    border-radius: 8px;
+    border-radius: 5px;
     code {
       color: var(--lg-darker-white);
       background-color: transparent;
     }
   }
   blockquote {
-    border-left: 5px solid var(--lg-lighter-gray);
-    padding-left: 7px;
     margin-left: 0;
+    border-radius: 8px;
+    background: var(--lg-darker-white);
+    width: 100%;
+    padding: 0px 10px;
+    font-size: var(--text-sm);
+    color: var(--lg-darkest-gray);
   }
   code {
     color: var(--lg-light-black);
