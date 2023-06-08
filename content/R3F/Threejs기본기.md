@@ -18,7 +18,7 @@ React Three Fiber에 대해 깊게 알아보기 전에 간단히 Three.js에 대
 
 <br/>
 
-### Three.js에서 뭘 알아봐야 할까?
+## Three.js에서 뭘 알아봐야 할까?
 
 <div style="width:100%; margin:auto;">
 
