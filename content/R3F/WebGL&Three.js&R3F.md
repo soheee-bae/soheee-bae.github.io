@@ -1,5 +1,5 @@
 ---
-title: "3D 개발을 위해 React Three Fiber을 쓰려는 이유"
+title: "3D 개발의 기초단계를 알아보자"
 date: 2023-06-05
 subtitle: "WebGL, Three.js, React Three Fiber에 대한 간단한 설명을 정리해 보았습니다."
 category: "React Three Fiber"
