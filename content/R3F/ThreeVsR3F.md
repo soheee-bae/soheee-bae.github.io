@@ -1,5 +1,5 @@
 ---
-title: "3D 개발을 위해 Three.js가 아닌 React Three Fiber을 쓰려는 이유"
+title: "3D 개발을 위해 Three.js가 아닌 React Three Fiber을 선호하는 이유"
 date: 2023-06-07
 subtitle: "Three.js와 React Three Fiber중 R3F를 선택한 이유와 장점을 적어 보았습니다."
 category: "React Three Fiber"
