@@ -1,7 +1,7 @@
 ---
-title: "React Three Fiber을 알아보자"
+title: "React Three Fiber을 알아보자 I"
 date: 2023-06-09
-subtitle: "R3F의 scene 만들기, resizing, mesh, 애니메이션, group에 대한 정보들을 정리했습니다. "
+subtitle: "R3F의 Scene 만들기, Resizing, Mesh, Animation, Group에 대한 정보들을 정리했습니다. "
 category: "React Three Fiber"
 tags:
   - r3f
