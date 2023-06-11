@@ -6,7 +6,7 @@ category: "React Three Fiber"
 tags:
   - threejs
 background: "r3f/r3f-livingroom.jpeg"
-emoji: "🔬"
+emoji: "🦶🏻"
 draft: false
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "React Three Fiber을 알아보자 II"
 date: 2023-06-11
-subtitle: "R3F의 orbitControls, Light, Custom geometry, Camera에 대한 정보들을 정리했습니다. "
+subtitle: "R3F의 OrbitControls, Light, Custom geometry, Camera에 대한 정보들을 정리했습니다. "
 category: "React Three Fiber"
 tags:
   - r3f
@@ -11,6 +11,8 @@ draft: false
 ---
 
 </br>
+
+깃헙 코드 : https://github.com/soheee-bae/React-Three-Fiber/tree/main/basic
 
 ## OrbitControls (궤도 컨드롤)
 

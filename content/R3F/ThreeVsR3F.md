@@ -7,7 +7,7 @@ tags:
   - r3f
   - threejs
 background: "r3f/r3f-livingroom.jpeg"
-emoji: "⚔️"
+emoji: "⚖️"
 draft: false
 ---
 
