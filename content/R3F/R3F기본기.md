@@ -1,7 +1,7 @@
 ---
-title: "React Three Fiber 연습하기"
+title: "React Three Fiber을 알아보자"
 date: 2023-06-09
-subtitle: "React Three Fiber 기본적인 기능들을 정리했습니다."
+subtitle: "R3F의 scene 만들기, resizing, mesh, 애니메이션, group에 대한 정보들을 정리했습니다. "
 category: "React Three Fiber"
 tags:
   - r3f
@@ -176,6 +176,125 @@ Rotation(회전)
 
 ## 애니매이션
 
-물론 장면을 만드는것도 좋지만 3D개발에서 애니매이션이 빠지면 안되죠. scene(장면)은 이미 각 프레임에 그려지고 있지만 아무것도 움직이지 않기 때문에 애니매이션 없이는 시각적으로 보이지 않습니다. 
+물론 장면을 만드는것도 좋지만 3D개발에서 애니매이션이 빠지면 안되죠. scene(장면)은 이미 각 프레임에 그려지고 있지만 아무것도 움직이지 않기 때문에 애니매이션 없이는 시각적으로 보이지 않습니다.
 
-Mesh를 회전시키거나 움직임을 주기위해서는 useFrame이라는 hook을 사용하고 이 hook은 <canvas> 내부에 있는 구성요소에서만 호출할수 있습니다. 
+Mesh를 회전시키거나 움직임을 주기위해서는 useFrame이라는 hook을 사용하고 이 hook은 <canvas> 내부에 있는 구성요소에서만 호출할수 있습니다.
+
+여기서 문제점은 장치의 프레임 속도가 더 높으면 높을수록 useFrame은 더 높은 빈도로 호출되고 애니메이션의 속도는 더 빨라지게 됩니다. 이 말은 즉슨 개개인이 쓰는 장치의 프레임 속도에 따라 애니메이션 속도가 다르게 보일수 있다는 것입니다. 물론 작은 프로젝트에서는 문제가 없겠지만 하루에 많은 사람들이 접속하는 웹 사이트라면 문제가 되겠죠.
+
+장치 프레임 속도에 상관없이 동일한 애니메이션 속도를 보여주기 위해서 useFrame이 제공하는 state과 delta를 사용할수 있습니다. 마지막 프레임 이후 경과된 시간을 알아내서 애니메이션 효과에 적용을 함으로써 문제를 해결할수 있습니다.
+
+state: 카메라, 렌더러, 장면 등과 같은 three.js환경에 대한 정보가 포함되어 있습니다.
+
+delta: 마지막 프레임 이후 소요된 시간을 초단위로 나타냅니다.
+
+<div style="width:100%; margin:auto;">
+
+![useFrameState](../../assets/images/r3f/r3f-useFrameState.png)
+
+</div>
+
+```
+// index.jsx
+
+import Experience from "./Experience";
+
+const root = ReactDOM.createRoot(document.querySelector("#root"));
+
+root.render(
+  <Canvas>
+    <Experience />
+  </Canvas>
+);
+
+
+//Experience.jsx
+import { useFrame } from "@react-three/fiber";
+import { useRef } from "react";
+
+export default function Experience() {
+	const cubeRef = useRef();
+
+	useFrame((state, delta) => {
+	    cubeRef.current.rotation.y += delta; //  또는 cubeRef.current.rotation.y += 0.01;
+	  });
+
+  return (
+		<>
+     <mesh
+        ref={cubeRef}
+        rotation-y={Math.PI * 0.25}
+        position-x={0}
+        scale={1.5}>
+        <boxGeometry />
+        <meshBasicMaterial color="mediumpurple" />
+      </mesh>
+
+      <mesh position-y={-1} rotation-x={-Math.PI * 0.5} scale={10}>
+        <planeGeometry />
+        <meshBasicMaterial color="greenyellow" />
+      </mesh>
+		</>
+  );
+}
+```
+
+위의 코드를 실행하면 밑과 같은 애니메이션이 적용됩니다.
+
+### Group
+
+Three.js에도 Group(https://threejs.org/docs/#api/en/objects/Group) 이 있듯이 React Three fiber에도 있습니다. Group이라는 것은 react의 div와 비슷합니다. 컴포넌트들을 div를 통해 나누는것 처럼 group은 개체들을 그룹으로 나누어 더 명확하게 볼수 있고 더 나아가 각각의 개체가 아닌 그룹을 기준으로 애니메이션 효과를 줄수있게 도와줍니다.
+
+그룹을 기준으로 한 애니메이션 효과를 주는 방법은 이와 같습니다.
+
+1. mesh들을 group으로 감싸준다.
+
+````
+<group ref={ groupRef }>
+		    <mesh position-x={ - 2 }>
+		        <sphereGeometry />
+		        <meshBasicMaterial color="orange" />
+		    </mesh>
+
+		    <mesh rotation-y={ Math.PI * 0.25 } position-x={ 2 } scale={ 1.5 }>
+		        <boxGeometry />
+		        <meshBasicMaterial color="mediumpurple" />
+		    </mesh>
+</group>
+```
+
+2. group을 위한 useRef를 만들어 group 태그에 지정해준다.
+
+````
+
+export default function Experience()
+{
+const groupRef = useRef()
+
+    return (
+    		<group ref={ groupRef }>
+    	  // ...
+    	)
+
+}
+
+```
+
+3. useFrame에 애니메이션을 적용해준다.
+
+
+
+```
+
+useFrame((state, delta) =>
+{
+groupRef.current.rotation.y += delta
+})
+
+```
+
+위의 코드를 실행하면 밑과 같은 애니메이션이 적용됩니다.
+
+
+
+```
