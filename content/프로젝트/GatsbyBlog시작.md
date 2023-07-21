@@ -1,4 +1,19 @@
-### 이 프로젝트를 시작하기 까지
+---
+title: "Gatsby Blog Starter 시작 [프로젝트]"
+date: 2022-12-21
+subtitle: "Gatsby Blog Starter 프로젝트 기획 과정을 담았습니다."
+category: "프로젝트"
+tags:
+  - project
+  - gatsby
+background: "others/roadSigns.jpeg"
+emoji: "🤔"
+draft: false
+---
+
+</br>
+
+## 이 프로젝트를 시작하기 까지
 
 많은 개발자들이 Github Page를 통해 개발 블로그를 시작하거나 현재 운영을 하고 있고 그중 한명이 되고 싶었던 저는 이 프로젝트를 시작하게 되었습니다. 많은 사람들이 사용하고 있는 Gatsby인 만큼 온라인에는 벌써 많은 블로그 스타터들이 있었지만 스타터 그 자체를 만드는 것 또한 하나의 배움이라고 생각해서 직접 만들기로 결정을 했습니다.  
 
