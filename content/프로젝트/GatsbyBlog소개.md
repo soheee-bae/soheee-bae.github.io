@@ -1,14 +1,14 @@
 ---
-title: "Gatsby Blog Starter 소개 [프로젝트]"
+title: "[프로젝트] Gatsby Blog Starter 소개"
 date: 2023-01-02
 subtitle: "Gatsby Blog Starter 프로젝트 소개 정보들을 담았습니다."
 category: "프로젝트"
 tags:
   - project
   - gatsby
-background: "others/roadSigns.jpeg"
-emoji: "🤔"
-draft: falseg
+background: "project/gatsbyBlog/gatsbyBlogBackground.png"
+emoji: "📜"
+draft: false
 ---
 
 </br>
@@ -21,35 +21,46 @@ draft: falseg
 
 이 프로젝트가 저에게 좀더 특별한 이유는 리액트만 주구장창 고집했었던 제가 한번도 접하지 않았었던 Gatsby를 제일 핵심 프레임워크로 사용한다는 점과 Graphql이라는 쿼리 언어를 사용할거라는 점이 였습니다. 두분야에 전혀 지식이 없는 저에겐 큰 도전이자 배움일것입니다.
 
+<br/>
+
 ## 프로젝트 상세 소개
 
 ### 핵심기능
 
 블로그에도 다양한 종류와 디자인이 있지만 저는 이런 핵심기능들에 중점을 두었습니다.
 
-1. 파일구조를 이용한 한눈에 보이는 목차
+#### 1. 파일구조를 이용한 한눈에 보이는 목차
 
-   블로그 포스팅을 만들때 마다 md 파일에 카테고리를 직접 입력하기 보단 자동으로 파일구조를 파악해 카테고리화해서 목차를 보여줄수 있는기능이 있다면 좋을것 같았습니다.
+블로그 포스팅을 만들때 마다 md 파일에 카테고리를 직접 입력하기 보단 자동으로 파일구조를 파악해 카테고리화해서 목차를 보여줄수 있는기능이 있다면 좋을것 같았습니다.
 
-2. 라이트모드와 다크모드
+#### 2. 라이트모드와 다크모드
 
-   여기저기 찾아보다 많은 블로그들이 라이트모드와 다크모드 기능을 가지고 있는것을 확인할수 있었습니다. 많은 블로그에 이 기능이 있다는건 그만큼 사용자들이 선호 하는 기능이라고 생각했고 제가 한번도 개발 해보지 않았던 기능이였기에 이 기회를 통해서 한번 해보는것도 좋을것 같다는 생각을 했습니다.
+여기저기 찾아보다 많은 블로그들이 라이트모드와 다크모드 기능을 가지고 있는것을 확인할수 있었습니다. 많은 블로그에 이 기능이 있다는건 그만큼 사용자들이 선호 하는 기능이라고 생각했고 제가 한번도 개발 해보지 않았던 기능이였기에 이 기회를 통해서 한번 해보는것도 좋을것 같다는 생각을 했습니다.
 
-3. Pagination
+#### 3. Pagination
 
-   블로그에서 중요한 기능중이 하나인 pagination 기능을 꼭 추가 하고싶었습니다. 포스팅 수가 많아질수록 더 유용한 기능인데요. 포스팅수에 상관없이 블로그 디자인이 깔끔했으면 좋았기에 Pagination이 큰 역할을 해줄것이라고 생각했습니다.
+블로그에서 중요한 기능중이 하나인 `pagination` 기능을 꼭 추가 하고싶었습니다. 포스팅 수가 많아질수록 더 유용한 기능인데요. 포스팅수에 상관없이 블로그 디자인이 깔끔했으면 좋았기에 Pagination이 큰 역할을 해줄것이라고 생각했습니다.
 
 ### 타겟유저
 
 - Github page와 Gatsby를 사용해 개발 블로그를 시작하거나 운영하고 싶은 개발자들
+- Gatsby를 이용한 블로그를 운영하고 싶은 사람들
 
 ### 구조도
 
 간단히 이 프로젝트의 파일 구조와 메뉴 구조도를 [whimsical.com](http://whimsical.com) 을 통해 정리해 보았습니다.
 
-![Screenshot 2023-05-06 at 5.58.09 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7c138f02-58da-4063-b149-1176ae4ca5b6/Screenshot_2023-05-06_at_5.58.09_PM.png)
+<div style="width:100%; margin:auto;">
 
-![Screenshot 2023-05-06 at 5.58.02 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/140a33e1-43bd-4988-ba93-aaf3d8f00175/Screenshot_2023-05-06_at_5.58.02_PM.png)
+![gatsbyBlog파일구조도](../../assets/images/project/gatsbyBlog/gatsbyBlog파일구조도.png)
+
+</div>
+
+<div style="width:100%; margin:auto;">
+
+![gatsbyBlog메뉴구조도](../../assets/images/project/gatsbyBlog/gatsbyBlog메뉴구조도.png)
+
+</div>
 
 ### 디자인
 
@@ -62,4 +73,4 @@ draft: falseg
 - [1주차] 01.03.23 - 01.10.23 : 디자인 및 기획
 - [2주차] 01.10.23 - 01.17.23 : Initial Set up, Atom과 Molecule 컴포넌트 개발 , Page 컴포넌트 개발 및 큰 레이아웃 스타일링
 - [3주차] 01.17.23 - 01.24.23 : 페이지네이션 및 라이트모드 다크모드 기능 구현 , 목차 기능 구현
-- [4주차] 01.24.23 - 01.31.23 : 기능추가 및 보안할점
+- [4주차] 01.24.23 - 01.31.23 : 기능추가 및 보안할z
