@@ -1,21 +1,21 @@
 ---
-title: "Gatsby Blog Starter 개발 [프로젝트]"
-date: 2023-01-31
-subtitle: "Gatsby Blog Starter 개발과정과 결과물에 대한 정보들을 담았습니다."
+title: "[프로젝트] Gatsby Blog Starter 개발"
+date: 2023-01-02
+subtitle: "Gatsby Blog Starter 프로젝트의 기획과정을 담았습니다."
 category: "프로젝트"
 tags:
   - project
   - gatsby
-background: "others/roadSigns.jpeg"
-emoji: "🤔"
-draft: true
+background: "project/gatsbyBlog/gatsbyBlogBackground.png"
+emoji: "🪜"
+draft: false
 ---
 
 ### 프로젝트를 진행하면서
 
 - Graphql plugin을 활용해서
 
-## 개인 프로젝트 
+## 개인 프로젝트
 
 - 프론트엔드 개발
 - 디자인
@@ -26,7 +26,7 @@ draft: true
 - Github:
 - Demo :
 
-// 결과물 스크린샷 
+// 결과물 스크린샷
 
 ---
 
