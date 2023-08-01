@@ -8,7 +8,7 @@ tags:
   - gatsby
 background: "project/gatsbyBlog/gatsbyBlogBackground.png"
 emoji: "🪜"
-draft: false
+draft: true
 ---
 
 ## 프로젝트를 진행하면서
