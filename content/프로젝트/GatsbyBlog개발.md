@@ -8,12 +8,33 @@ tags:
   - gatsby
 background: "project/gatsbyBlog/gatsbyBlogBackground.png"
 emoji: "🪜"
-draft: true
+draft: false
 ---
 
-## 프로젝트를 진행하면서
+<br/>
 
+<div style="width:100%; margin:auto; text-align:center;">
+
+![gatsbyBlog라이트모드](../../assets/images/project/gatsbyBlog/gatsbyBlogStarterLight.png)
+
+##### 라이트모드
+
+</div>
+
+<div style="width:100%; margin:auto; text-align:center;">
+
+![gatsbyBlog다크모드](../../assets/images/project/gatsbyBlog/gatsbyBlogStarterDark.png)
+
+##### 다크모드
+
+</div>
+
+### 프로젝트를 진행하면서
+
+- 가독성을 높이고 쉽게 유저들이 하드코딩된 문자열과 숫자들을 변경할수 있게 하기 위해서 constrants 폴더에 나열하고 정리를 했습니다.
+- 여러가지의 hook을 사용해서
 - Graphql plugin을 활용해서
+- 목차
 
 <br/>
 
@@ -34,22 +55,6 @@ Gatsby, Graphql, React, SCSS
 🔗 Github : https://github.com/soheee-bae/Gatsby-Clean-Blog-Starter
 
 🚀 Demo : https://gatsbycleanblogstarterkit.gatsbyjs.io/
-
-<div style="width:100%; margin:auto; text-align:center;">
-
-![gatsbyBlog라이트모드](../../assets/images/project/gatsbyBlog/gatsbyBlogStarterLight.png)
-
-##### 라이트모드
-
-</div>
-
-<div style="width:100%; margin:auto; text-align:center;">
-
-![gatsbyBlog다크모드](../../assets/images/project/gatsbyBlog/gatsbyBlogStarterDark.png)
-
-##### 다크모드
-
-</div>
 
 <br/>
 
