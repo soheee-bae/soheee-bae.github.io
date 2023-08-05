@@ -206,7 +206,7 @@ export default function CustomObject(){
 [OrthographicCamera](https://threejs.org/docs/?q=camera#api/ko/cameras/OrthographicCamera "OrthographicCamera")는 렌더링 된 이미지에서 객체의 크기는 카메라와의 거리에 관계없이 일정하게 유지됩니다.
 
 ```
-Canvas camera={ { fov: 45, near: 0.1, far: 200 } }>
+<Canvas camera={ { fov: 45, near: 0.1, far: 200 } }>
     <Experience />
 </Canvas>
 ```
