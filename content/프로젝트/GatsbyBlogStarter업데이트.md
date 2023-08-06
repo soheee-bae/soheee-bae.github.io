@@ -41,26 +41,34 @@ Gatsby Blog Starter이 끝난 이 시점 제가 막상 이 스타터를 쓰려�
 
 ### 🎨 디자인
 
-<div style="width:100%; margin:auto; text-align:center;">
+<div style="position:relative; width:100%; margin:auto; text-align:center;">
+
+<div style="float:left; width:48%; margin:auto; text-align:center;">
 
 ![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/gatsbyBlogV2DesignI.jpg)
 
-##### 게시글 디테일 페이지
+##### 메인 페이지
 
 </div>
 
-<div style="width:100%; margin:auto; text-align:center;">
+<div style="float:right; width:48%; margin:auto; text-align:center;">
 
 ![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/gatsbyBlogV2DesignII.jpg)
 
-##### 게시글 디테일 페이지
+##### 게시글 메인 페이지
 
 </div>
 
-<div style="width:100%; margin:auto; text-align:center;">
+</div>
+
+<div style="float:left; width:100%; margin:auto; text-align:center;">
+
+<div style="width:48%; margin:auto; text-align:center;">
 
 ![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/gatsbyBlogV2DesignIII.jpg)
 
 ##### 게시글 디테일 페이지
+
+</div>
 
 </div>
