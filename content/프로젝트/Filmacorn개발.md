@@ -14,7 +14,7 @@ draft: false
 
 <br/>
 
-<div style="width:100%; margin:auto; float:left;">
+<div style="width:100%; margin:auto; float:left; text-align:center;">
 
 <div style="width:48%; margin:auto; float:left;">
 
@@ -31,10 +31,10 @@ draft: false
 ##### 영화리스트 페이지
 
 </div>
+
 </div>
 
-
-<div style="width:100%; margin:auto; float:left;">
+<div style="width:100%; margin:auto; float:left; text-align:center;">
 
 <div style="width:48%; margin:auto; float:left;">
 
@@ -48,10 +48,14 @@ draft: false
 
 ![Filmacorn_watchlist](../../assets/images/project/Filmacorn/Filmacorn_watchlist.png)
 
-#####  찜한 영화 페이지
+##### 찜한 영화 페이지
 
 </div>
+
 </div>
+
+<br/>
+<br/>
 
 ### 프로젝트를 진행하면서
 
@@ -84,7 +88,7 @@ React, JavaScript, TypeScript, Next.js, SCSS, TMDB-api
 - 영화를 카테고리화해 추천해주고 보여주는 기능
 - TMDB를 통한 회원가입 및 로그인
 - 영화 찾아보기 기능
-- 자세한 영화 정보 보기 및 비슷한 영화 추천
-- 유저들이 원하는 영화 리스트를 보관하고 저장할수 있는 서비스
+- 자세한 영화 정보 보기 및 비슷한 영화 추천 기능
+- 유저들이 원하는 영화 리스트를 보관하고 저장할수 있는 기능
 
 <br/>
