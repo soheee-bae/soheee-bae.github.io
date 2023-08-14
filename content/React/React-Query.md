@@ -5,8 +5,8 @@ subtitle: "리액트 쿼리를 사용하는 이유와 장점들을 나열해보�
 category: "React"
 tags:
   - react-query
-background: "r3f/r3f-livingroom.jpeg"
-emoji: "🖥️"
+background: "react/reactQueryBackground.jpeg"
+emoji: "🗞️"
 draft: false
 ---
 

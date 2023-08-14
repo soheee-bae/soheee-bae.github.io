@@ -1,13 +1,13 @@
 ---
-title: "웹 브라우저에 URL을 입력하면 어떤 일이 일어날까?"
-date: 2023-06-11
-subtitle: "웹페이지가 사용자에게 보여지기까지의 과정을 적어보았습니다. "
-category: "JavaScript"
+title: "React Query의 Query와 Mutation"
+date: 2023-08-13
+subtitle: "리액트 쿼리를 사용하기 위해서 알아야 할 점들과 자세한 정보들을 정리했습니다."
+category: "React"
 tags:
-  - javascript
-background: "r3f/r3f-livingroom.jpeg"
-emoji: "🖥️"
-draft: true
+  - react-query
+background: "react/reactQueryBackground.jpeg"
+emoji: "🗞️"
+draft: false
 ---
 
 </br>

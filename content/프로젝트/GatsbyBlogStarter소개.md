@@ -7,7 +7,7 @@ tags:
   - project
   - gatsby
 background: "project/gatsbyBlog/gatsbyBlogBackground.png"
-emoji: "🪜"
+emoji: "🔖"
 draft: false
 ---
 
