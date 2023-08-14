@@ -9,7 +9,7 @@ tags:
   - next.js
 background: "project/gatsbyBlog/gatsbyBlogBackground.png"
 emoji: "🎬"
-draft: false
+draft: true
 ---
 
 </br>

@@ -16,14 +16,22 @@ draft: false
 
 React Query는 크게 2가지로 나뉩니다.
 
-Query : 데이터를 가져오는 것
-Mutation : 데이터의 값을 바꾸거나 추가 또는 삭제하는것
+- Query : 서버 데이터를 가져오는 것
+- Mutation : 서버 데이터의 값을 바꾸거나 추가 또는 삭제하는것
 
-### useQuery에 대해서
+</br>
 
-useQuery를 사용할땐 두가지를 주의해야 합니다.
+## Query
 
-- queryKey : useQuery마다 배열 형태로 부여되는 고유한 key 값. 이 queryKey를 통해서 다른 mutation function이나 다른 곳에서도 해당 쿼리의 결과를 꺼내오는것이 가능합니다. 더 나아가서 특정한 데이터를 가져오기 위해서 데이터의 아이디나 필요한 필터링 조건을 배열 형태로 보내줄수 있습니다.
+### 💬 useQuery 기본 설명
+
+GET 요청과 비슷하게 서버 데이터를 가져오기 위해선 `useQuery`라는 hook이 사용됩니다. 이 `useQuery`를 사용할 때 두가지를 주의해야 합니다.
+
+```
+const data = useQuery(queryKey, queryFn)
+```
+
+- queryKey : `useQuery`마다 배열 형태로 부여되는 고유한 `key` 값입니다. 이 `queryKey`를 통해서 다른 mutation function이나 다른 곳에서도 해당 쿼리의 결과를 꺼내오는것이 가능합니다. `React query`는 이 `queryKey`로 캐싱 관리를 하여 데이터마다 고유한 `key` 값을 지정하는게 중요합니다. 더 나아가서 특정한 데이터를 가져오기 위해서 데이터의 아이디나 필요한 필터링 조건을 배열 형태로 보내줄수 있습니다.
 
 ```
 /posts => ["posts"]
@@ -32,50 +40,74 @@ useQuery를 사용할땐 두가지를 주의해야 합니다.
 /posts/2/comments => ["posts", post.id, "comments"]
 ```
 
-- queryFn : Promise 처리가 이뤄지는 함수로 서버에 api를 요청하는 코드입니다.
+- queryFn : `Promise` 처리가 이뤄지는 함수로 서버에 api를 요청하는 코드입니다.
+
+`useQuery`는 비동기로 작동합니다. 만약 여러개의 `useQuery`가 한 컴포넌트에서 사용될 경우 하나가 끝난다음 다음 `useQuery`가 실행되는 것이 아닌 여러개의 `useQuery`가 동시에 실행됩니다.
+
+</br>
+
+### 📌 useQuery return 값
 
 ```
-import { useQuery, useMutation} from '@tanstack/react-query'
-
-function wait(duration) {
-  return new Promise((resolve) => setTimeout(resolve, duration));
-}
-
-function App() {
-  const newQuery = useQuery({
-    queryKey: ["uniqueKeyName"],
+  const queryClient = useQueryClient();
+  const { data, isLoading, isError, error, isSuccess, status} = useQuery({
+    queryKey: ["posts"],
     queryFn: () => wait(1000).then(() => [...POSTS]),
   });
-}
 
-```
-
-#### useQuery 결과에 대해서
-
-- data : queryFn 함수를 랜더한 결과값을 나타낸다.
-- isLoading : 서버에서 데이터를 받아오는 동안 로딩 화면을 보여주고 싶다면 이 값을 쓸수 있다.
-- isError : boolean 형태의 값으로 여러번의 시도끝에 계속 queryFn 함수가 에러를 낸다면 이 값으로 에러를 확신할수 있다.
-- error: 에러가 생겼을때 화면에 에러 메세지를 보고 싶거나 확인하고 싶다면 이 값을 쓸수 있다.
-- isSuccess :
-- status : `error`, `loading`, `success`
-
-```
-  const {data, isLoading, isError, error} =  useQuery({
-    queryKey : ["uniqueKeyName"]
-    queryFn : ()=> wait(1000).then(()=> [...POSTS])
-  })
-
-  if(isError){
-    return <pre>{JSON.stringify(error)}</pre>
+  if (isLoading || status === 'loading') return <div>...isLoading</div>;
+  if (isError || status === 'error') {
+    return <pre>{JSON.stringify(error)}</pre>;
   }
 
   return (
-    <div>{data.map(()=>...)}</div>
+    <div>{data.map((data) => (<p key={data.id}>{data.title}</p>))}</div>
   )
-
 ```
 
-### Mutation
+- data : queryFn 함수를 랜더한 결과값을 나타냅니다.
+- isLoading : boolean 형태의 값으로 서버에서 데이터를 받아오는 동안 로딩 화면을 보여주고 싶다면 이 값이 유용하게 쓰일것입니다.
+- isError : boolean 형태의 값으로 여러번의 시도끝에 계속 queryFn 함수가 에러를 낸다면 이 값으로 에러를 확신할수 있습니다.
+- error: 에러가 생겼을때 화면에 에러 메세지를 보이게 하고 싶거나 확인하고 싶다면 이 값을 쓸수 있습니다.
+- isSuccess : boolean 형태의 값으로 성공적으로 데이터를 받아왔는지를 확인할 수 있습니다.
+- status : `error`, `loading`, `success`중 값의 상태를 확인할 수 있습니다.
+- fetchStatus :
+  - `fetching` : 현재 데이터를 가지고 오는 중일때를 뜻합니다
+  - `idle` : 현재 아무것도 하지 않고 있거나 데이터를 가져온 후를 뜻합니다.
+  - `paused` : 데이터를 가져오는중에 인터넷과 끊겼거나 어떠한 이유로 멈췄을 때를 뜻합니다.
+
+</br>
+
+### 📌 useQuery를 사용해 fetching 할때의 과정
+
+1. 이러한 경우에 페이지안의 컴포넌트에 `useQuery`가 있다면 `useQuery`는 실행된다.
+
+- 페이지 새로고침
+- 한 페이지에서 다른 페이지로 넘어갈때
+- 마우스 포커스를 다른 곳에 뒀다가 다시 페이지로 돌아갈때
+  = 인터넷이 끊겼다가 다시 돌아오는 동시에 페이지를 보여줄때
+
+2. QueryKey를 사용해 데이터가 `stale`한지를 알아본다음 `refetch`를 한다.
+3. `refetch`된 데이터를 화면에 보여준다.
+
+제일 처음에 페이지를 로딩할때
+
+- fetchStatus : "fetching"
+- status : "loading"
+
+데이터를 성공적으로 가져왔을 때
+
+- fetchStatus : "idle"
+- status : "success" (실패할 경우 "error")
+
+다른 페이지로 넘어갈때 똑같은 데이터를 넘어가는 페이지에서도 부를 경우 (Refetching)
+
+- fetchStatus : "fetching"
+- status : "success"
+
+</br>
+
+## Mutation
 
 - mutationFn : queryFn과 같이 Promise 처리가 이뤄지는 함수로 서버에 api를 요청하는 코드입니다. 하나의 props를 받을수 있으며 이 값을 함수에 전달하여 사용할수 있습니다.
 - onSuccess : 예상대로 작동해 값을 받을 경우 하고 싶은 함수
@@ -88,7 +120,7 @@ onSuccess를 사용하지 않는다면 mutationFn이 랜더된 후에도 화면�
 // const queryClient = new QueryClient() 를 사용하는 방법
   const queryClient = useQueryClient();
 
-  const { mutate } = useMutation({
+  const { mutate, isLoading } = useMutation({
     mutationFn: (title) => wait(1000).then(() => POSTS.push({ id: 1, title })),
     onSuccess: () => {
       queryClient.invalidateQueries(["posts"]);
@@ -100,7 +132,9 @@ onSuccess를 사용하지 않는다면 mutationFn이 랜더된 후에도 화면�
   )
 ```
 
-### Devtool
+</br>
+
+## Devtool
 
 React Query Devtools는 React Query의 장점중의 하나인 강력한 내장 개발 도구입니다.
 사용중인 모든 쿼리 상태들을 시각화하여 확인할수 있게 도와주고 에러가 생기거나 예상대로 작동하지 않는 경우 문제를 해결할수 있게 도와줍니다.
