@@ -1,7 +1,7 @@
 ---
-title: "React Query 사용법 및 쓰는 이유"
+title: "React Query를 사용하는 이유"
 date: 2023-08-11
-subtitle: "리액트 쿼리를 사용해야하는 이유와 기본적인 설명을 적었습니다."
+subtitle: "리액트 쿼리를 사용하는 이유와 장점들을 나열해보았습니다."
 category: "React"
 tags:
   - react-query
@@ -12,127 +12,75 @@ draft: false
 
 </br>
 
-React Query를 사용하는 이유
+## React Query를 사용하는 이유
 
-React Query는 Data Fetching, Cashing, 동기화, 서버 업데이트 등을 직관적이고 효율적이게 관리를 하게 해주는 라이브러리입니다. 전역 상태 관리 도구의 대표적인것중 `redux`나 `recoil` 같은 라이브러리들이 있는데, 이번 글에서는 React Query에 대한 정보들을 담아보려고 합니다.
+React Query는 서버의 값 Fetching, Cashing, 동기화, 서버 값 업데이트, 에러 핸들링 등 비동기 과정을 직관적이고 효율적인 방법으로 할 수 있게 해주는 라이브러리입니다. 프론트엔드 개발자가 React를 사용하면서 마주하게 되는 여러 가지 문제점 중 제일 대표적인 하나가 state 상태 관리에 관한 부분인데요. 대표적으로 React의 전역 상태 관리 도구에는 `redux`나 `recoil` 같은 라이브러리들이 존재하지만, 이러한 라이브러리들은 클라이언트 쪽의 데이터들을 관리하기엔 적합할 순 있어도 서버 쪽의 데이터들을 관리하기엔 적합하지 않은 점들이 있습니다.
 
-install 하는 방법
+클라이언트 쪽 위주로 전역 상태를 관리하는 도구들을 사용하다 보면 어느 순간부터 클라이언트 상태와 서버 상태가 함께 공존하게 되고 그 데이터들이 서로 상호작용하면서 애매한 상태의 데이터가 되어 버립니다. 예를 들면 서버에는 이미 업데이트가 되 버린 데이터가 클라이언트에서는 업데이트 되기전 데이터로 유저에게 보이거나 사용되고 있는 상황을 뜻합니다. React query를 사용하여 서버 상태를 관리한다면 클라이언트 상태를 분리하여 관리할 수 있기 때문에 훨씬 효율적인 방법이 될 것입니다.
+
+React Query를 사용하기 좋은 예로는 클라이언트의 전역 상태 데이터가 많이 필요하지 않은 admin 페이지와 같은 관리형 페이지가 있습니다. 만약 동시에 두 명의 관리자가 같은 화면을 보고 있는 상황에서 한 관리자가 데이터를 변경할 경우 다른 관리자도 변경된 데이터를 볼 수 있어야 합니다. 이러한 경우 변경된 데이터는 클라이언트 쪽보다는 서버 쪽에서 관리하는게 더 적합하다고 볼 수 있고 React Query를 적용한다면 이 구조를 더 단순화 시킬 수 있습니다.
+
+</br>
+
+## React Query의 장점
+
+### Data Fetching 또는 업데이트 로직을 단순화 할수 있습니다.
+
+```
+const getServerData = async () => {
+  const data = await fetch("...").then((response) => response.json());
+  return data;
+};
+
+// Before
+export default function App() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getServerData()
+      .then((result) => setData(result))
+      .catch((e) => ... );
+  }, []);
+
+  return <div>{JSON.stringify(data)}</div>;
+}
+
+// After
+export default function App() {
+  const { data } = useQuery(["dataKey"], getServerData);
+  return <div>{JSON.stringify(data)}</div>;
+}
+```
+
+`useState`과 `useEffect`를 사용한 상태 관리 과정을 React query를 통해서 단순화 시킬 수 있습니다. React query를 사용함과 동시에 코드 수를 줄일수 있고 `useEffect`로 인해서 발생하는 `Side Effect`를 제거할 수 있습니다. 특히 react query가 내장된 기능으로 데이터 관련 로직들을 전부 처리해주기에 팀 프로젝트안의 개발자들이 동일화 된 방식으로 코드를 작성할 수 있습니다. 이러한 경우 서로의 코드를 보며 전체적인 흐름을 파악하는 것이 쉬워지게 되고 수정하는 일이 좀 더 수월해 지게 됩니다.
+
+### 캐싱
+
+- Caching을 통해서 API 콜과 서버에 대한 부담을 줄여줌으로써 어플리케이션의 속도를 높여줍니다.
+- 가져온 데이터를 업데이트 할 경우 자동으로 업데이트된 데이터를 가져올수 있습니다.
+- 동일 데이터에 대한 중복 요청을 제거합니다.
+- 비동기 과정을 관리할 수 있습니다.
+- 데이터가 오래 되었다고 판단될시 데이터를 다시 가져오는 시스템이 지원됩니다.
+- React Hooks와 유사한 인터페이스를 제공하기에 React를 주로 썼던 개발자들에겐 진입장벽이 낮습니다.
+
+</br>
+
+## React Query 기본 설치 및 세팅
 
 ```
 npm i @tanstack/react-query
-npm i @tanstack/react-query-devtools
 ```
 
-사용 방법
-
-1. React Provider을 만들어 사용하고 싶은 페이지들이나 app 전체를 감싸야 한다.
+React Query를 사용하기 위해서는 QueryClient 인스턴스를 생성하여 컴포넌트들이나 app 전체가 접근할 수 있도록 QueryClientProvider로 감싸줘야 합니다. 여기서 client prop으로 QueryClient를 넘겨줘야 합니다.
 
 ```
-import {QueryClient, QueryClientProvider} from '@tanstack/react-query'
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
-<QueryClientProvider client={queryClient}>
-  <App />
-</QueryClientProvider>
+root.render(
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>
+);
 ```
-
-자세히 알아보기
-
-React Query는 크게 2가지로 나뉘기 때문에 접근성이 아주 쉽습니다.
-
-- Query : 데이터를 가져오는 것
-- Mutation : 데이터의 값을 바꾸거나 추가 또는 삭제하는것
-
-useQuery에 대해서
-
-useQuery를 사용할땐 두가지를 주의해야 합니다.
-
-- queryKey : useQuery마다 배열 형태로 부여되는 고유한 key 값. 이 queryKey를 통해서 다른 mutation function이나 다른 곳에서도 해당 쿼리의 결과를 꺼내오는것이 가능합니다.
-- queryFn : Promise 처리가 이뤄지는 함수로 서버에 api를 요청하는 코드입니다.
-
-```
-import { useQuery, useMutation} from '@tanstack/react-query'
-
-function wait(duration) {
-  return new Promise((resolve) => setTimeout(resolve, duration));
-}
-
-function App() {
-  const newQuery = useQuery({
-    queryKey: ["uniqueKeyName"],
-    queryFn: () => wait(1000).then(() => [...POSTS]),
-  });
-}
-
-```
-
-useQuery 결과에 대해서
-
-- data : queryFn 함수를 랜더한 결과값을 나타낸다.
-- isLoading : 서버에서 데이터를 받아오는 동안 로딩 화면을 보여주고 싶다면 이 값을 쓸수 있다.
-- isError : boolean 형태의 값으로 여러번의 시도끝에 계속 queryFn 함수가 에러를 낸다면 이 값으로 에러를 확신할수 있다.
-- error: 에러가 생겼을때 화면에 에러 메세지를 보고 싶거나 확인하고 싶다면 이 값을 쓸수 있다.
-
-```
-  const {data, isLoading, isError, error} =  useQuery({
-    queryKey : ["uniqueKeyName"]
-    queryFn : ()=> wait(1000).then(()=> [...POSTS])
-  })
-
-  if(isError){
-    return <pre>{JSON.stringify(error)}</pre>
-  }
-
-  return (
-    <div>{data.map(()=>...)}</div>
-  )
-
-```
-
-### Mutation
-
-- mutationFn : queryFn과 같이 Promise 처리가 이뤄지는 함수로 서버에 api를 요청하는 코드입니다. 하나의 props를 받을수 있으며 이 값을 함수에 전달하여 사용할수 있습니다.
-- onSuccess : 예상대로 작동해 값을 받을 경우 하고 싶은 함수
-  - queryClient.invalidateQueries : queryKey를 사용해 값을 다시 refetch를 한다
-
-하나 주의 할점!
-onSuccess를 사용하지 않는다면 mutationFn이 랜더된 후에도 화면에 바뀐 결과가 나타나지 않을겁니다. 그 이유로는 mutation은 단순히 `uniquekeyname`을 가지고 있는 값을 바꾸어버릴 뿐 다시 fetch 해오지 않기 때문입니다.
-
-```
-// const queryClient = new QueryClient() 를 사용하는 방법
-  const queryClient = useQueryClient();
-
-  const { mutate } = useMutation({
-    mutationFn: (title) => wait(1000).then(() => POSTS.push({ id: 1, title })),
-    onSuccess: () => {
-      queryClient.invalidateQueries(["posts"]);
-    },
-  });
-
-  return (
-      <button onClick={()=> mutate('New post') } />
-  )
-```
-
-### Devtool
-
-React Query Devtools는 React Query의 장점중의 하나인 강력한 내장 개발 도구입니다.
-사용중인 모든 쿼리 상태들을 시각화하여 확인할수 있게 도와주고 에러가 생기거나 예상대로 작동하지 않는 경우 문제를 해결할수 있게 도와줍니다.
-
-사용 방법 : QueryClientProvider wrapper 안에 ReactQueryDevtools를 넣어줍니다.
-
-```
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-
-...
-
-return
-  <QueryClientProvider client ={queryClient}>
-    //initialIsOpen : open된 채로 시작
-    //position : devtools를 열 수 있는 logo 위치 - 우측 하단으로 지정
-    <ReactQueryDevtools initialIsOpen={false} position='bottom-right' />
-  </QueryClientProvider>
-```
-
-//사진 넣기
