@@ -65,13 +65,13 @@ const data = useQuery(queryKey, queryFn)
   )
 ```
 
-- data : queryFn 함수를 랜더한 결과값을 나타냅니다.
-- isLoading : boolean 형태의 값으로 서버에서 데이터를 받아오는 동안 로딩 화면을 보여주고 싶다면 이 값이 유용하게 쓰일것입니다.
-- isError : boolean 형태의 값으로 여러번의 시도끝에 계속 queryFn 함수가 에러를 낸다면 이 값으로 에러를 확신할수 있습니다.
-- error: 에러가 생겼을때 화면에 에러 메세지를 보이게 하고 싶거나 확인하고 싶다면 이 값을 쓸수 있습니다.
-- isSuccess : boolean 형태의 값으로 성공적으로 데이터를 받아왔는지를 확인할 수 있습니다.
-- status : `error`, `loading`, `success`중 값의 상태를 확인할 수 있습니다.
-- fetchStatus :
+- <b>data</b> : queryFn 함수를 랜더한 결과값을 나타냅니다.
+- <b>isLoading</b> : boolean 형태의 값으로 서버에서 데이터를 받아오는 동안 로딩 화면을 보여주고 싶다면 이 값이 유용하게 쓰일것입니다.
+- <b>isError</b> : boolean 형태의 값으로 여러번의 시도끝에 계속 queryFn 함수가 에러를 낸다면 이 값으로 에러를 확신할수 있습니다.
+- <b>error</b> : 에러가 생겼을때 화면에 에러 메세지를 보이게 하고 싶거나 확인하고 싶다면 이 값을 쓸수 있습니다.
+- <b>isSuccess</b> : boolean 형태의 값으로 성공적으로 데이터를 받아왔는지를 확인할 수 있습니다.
+- <b>status</b> : `error`, `loading`, `success`중 값의 상태를 확인할 수 있습니다.
+- <b>fetchStatus</b> :
   - `fetching` : 현재 데이터를 가지고 오는 중일때를 뜻합니다
   - `idle` : 현재 아무것도 하지 않고 있거나 데이터를 가져온 후를 뜻합니다.
   - `paused` : 데이터를 가져오는중에 인터넷과 끊겼거나 어떠한 이유로 멈췄을 때를 뜻합니다.
