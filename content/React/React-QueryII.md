@@ -16,8 +16,8 @@ draft: false
 
 React Query는 크게 2가지로 나뉩니다.
 
-- Query : 서버 데이터를 가져오는 것
-- Mutation : 서버 데이터의 값을 바꾸거나 추가 또는 삭제하는것
+- <b>Query</b> : 서버 데이터를 가져오는 것
+- <b>Mutation</b> : 서버 데이터의 값을 바꾸거나 추가 또는 삭제하는것
 
 </br>
 
@@ -31,7 +31,7 @@ GET 요청과 비슷하게 서버 데이터를 가져오기 위해선 `useQuery`
 const data = useQuery(queryKey, queryFn)
 ```
 
-- queryKey : `useQuery`마다 배열 형태로 부여되는 고유한 `key` 값입니다. 이 `queryKey`를 통해서 다른 mutation function이나 다른 곳에서도 해당 쿼리의 결과를 꺼내오는것이 가능합니다. `React query`는 이 `queryKey`로 캐싱 관리를 하여 데이터마다 고유한 `key` 값을 지정하는게 중요합니다. 더 나아가서 특정한 데이터를 가져오기 위해서 데이터의 아이디나 필요한 필터링 조건을 배열 형태로 보내줄수 있습니다.
+- <b>queryKey</b> : `useQuery`마다 배열 형태로 부여되는 고유한 `key` 값입니다. 이 `queryKey`를 통해서 다른 mutation function이나 다른 곳에서도 해당 쿼리의 결과를 꺼내오는것이 가능합니다. `React query`는 이 `queryKey`로 캐싱 관리를 하여 데이터마다 고유한 `key` 값을 지정하는게 중요합니다. 더 나아가서 특정한 데이터를 가져오기 위해서 데이터의 아이디나 필요한 필터링 조건을 배열 형태로 보내줄수 있습니다.
 
 ```
 /posts => ["posts"]
@@ -40,7 +40,7 @@ const data = useQuery(queryKey, queryFn)
 /posts/2/comments => ["posts", post.id, "comments"]
 ```
 
-- queryFn : `Promise` 처리가 이뤄지는 함수로 서버에 api를 요청하는 코드입니다.
+- <b>queryFn</b> : `Promise` 처리가 이뤄지는 함수로 서버에 api를 요청하는 코드입니다.
 
 `useQuery`는 비동기로 작동합니다. 만약 여러개의 `useQuery`가 한 컴포넌트에서 사용될 경우 하나가 끝난다음 다음 `useQuery`가 실행되는 것이 아닌 여러개의 `useQuery`가 동시에 실행됩니다.
 
@@ -108,7 +108,7 @@ fetchStatus : idle
 
 ```
 fetchStatus : fetching
- status : success
+ status : success (실패할 경우 "error")
 ```
 
 </br>
@@ -117,41 +117,46 @@ fetchStatus : fetching
 
 ```
   const { data, isLoading, isError, error, isSuccess, status} = useQuery({
-    queryKey: ["posts"],
+    queryKey: ["posts", postQuery?.data?.postId],
     queryFn: getPosts,
+    enabled: postQuery?.data.postId !== null,
     staleTime : 1000,
     refetchInterval : 1000,
   });
 ```
 
-staleTime : 데이터를 `fresh`상태에서 `stale`상태로 전환될 때까지의 시간을 정해줄 수 있습니다. 만약 5분을 지정해준다면 5분동안은 데이터가 `fresh`상태를 유지할것이며 `fresh`상태의 데이터는 항상 cache에서 읽어온다는 것을 뜻합니다.
+<b>enabled</b> : 위에서 말했듯이 `useQuery`는 비동기로 작동합니다. 만약 여러개의 `useQuery`를 한 컴포넌트에서 동기로 작동하고 싶다면 `enable`를 사용할수 있습니다. boolean 형태의 조건을 넣어주면서 조건이 `true`일때 `useQuery`를 작동시킵니다.
 
-refetchInterval: milisecond 단위의 시간으로 지정한 시간마다 데이터를 refetch 할수 있습니다. 만약 1000를 지정해주었다면 1초마다 한번씩 데이터를 refetch 해줍니다.
+<b>staleTime</b> : 데이터를 `fresh`상태에서 `stale`상태로 전환될 때까지의 시간을 정해줄 수 있습니다. 만약 5분을 지정해준다면 5분동안은 데이터가 `fresh`상태를 유지할것이며 `fresh`상태의 데이터는 항상 cache에서 읽어온다는 것을 뜻합니다.
+
+<b>refetchInterval</b>: milisecond 단위의 시간으로 지정한 시간마다 데이터를 refetch 할수 있습니다. 만약 1000를 지정해주었다면 1초마다 한번씩 데이터를 refetch 해줍니다.
+
+> 💡 <b>stale이란?</b> React query는 캐싱된 data를 `stale`한 상태로 여깁니다. 여기서 `stale`은 "신선하지 않다"라는 뜻이 있는데요. 이 `stale`한 data는 최신화가 필요한 데이터라는 의미로 컴포넌트가 마운트나 업데이트되면 refetch가 됩니다.
 
 </br>
 
 ## Mutation
 
-- mutationFn : queryFn과 같이 Promise 처리가 이뤄지는 함수로 서버에 api를 요청하는 코드입니다. 하나의 props를 받을수 있으며 이 값을 함수에 전달하여 사용할수 있습니다.
-- onSuccess : 예상대로 작동해 값을 받을 경우 하고 싶은 함수
-  - queryClient.invalidateQueries : queryKey를 사용해 값을 다시 refetch를 한다
+### 💬 useMutation 기본 설명
 
-하나 주의 할점!
-onSuccess를 사용하지 않는다면 mutationFn이 랜더된 후에도 화면에 바뀐 결과가 나타나지 않을겁니다. 그 이유로는 mutation은 단순히 `uniquekeyname`을 가지고 있는 값을 바꾸어버릴 뿐 다시 fetch 해오지 않기 때문입니다.
+POST나 PUT 요청과 비슷하게 서버 데이터의 값을 바꾸거나 추가 또는 삭제하기 위해선 `useMutation`라는 hook이 사용됩니다. 이 `useMutation`를 사용할 때 두가지를 주의해야 합니다.
+
+- <b>mutationFn</b> : queryFn과 같이 Promise 처리가 이뤄지는 함수로 서버에 api를 요청하는 코드입니다. 하나의 props를 받을수 있으며 이 값을 함수에 전달하여 사용할수 있습니다.
+- <b>onSuccess</b> : 예상대로 작동해 값을 받을 경우 하고 싶은 함수를 뜻합니다. `onSuccess`를 사용하지 않는다면 `mutationFn`이 랜더된 후에도 화면에 바뀐 결과가 나타나지 않을겁니다. 그 이유로는 mutation은 단순히 `uniquekeyname`을 가지고 있는 값을 바꾸어버릴 뿐 다시 `fetch` 해오지 않기 때문입니다.
+  - queryClient.invalidateQueries : queryKey를 사용해 값을 다시 refetch를 할수 있습니다.
 
 ```
-// const queryClient = new QueryClient() 를 사용하는 방법
   const queryClient = useQueryClient();
 
-  const { mutate, isLoading } = useMutation({
-    mutationFn: (title) => wait(1000).then(() => POSTS.push({ id: 1, title })),
-    onSuccess: () => {
+  const createPostMutation = useMutation({
+    mutationFn: (props) => wait(1000).then(() => POSTS.push({ id: 1, props })),
+    onSuccess: (data, props, context) => {
       queryClient.invalidateQueries(["posts"]);
     },
   });
 
   return (
-      <button onClick={()=> mutate('New post') } />
+      <button onClick={()=> createPostMutation.mutate('New post') } />
   )
 ```
 
