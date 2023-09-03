@@ -139,15 +139,12 @@ fetchStatus : fetching
 
 ### 💬 useMutation 기본 설명
 
-POST나 PUT 요청과 비슷하게 서버 데이터의 값을 바꾸거나 추가 또는 삭제하기 위해선 `useMutation`이라는 hook이 사용됩니다. 받는 props들이 위의 `useQuery`와 동일하지만 그 외에 또 다른 하나의 `mutate` 또는 `mutateAsync`이라는 props를 받습니다.
-
-- `mutate`는 함수 형태이며 `useMutation`을 실행할수 있게 도와줍니다.
-- `mutateAsync`는
+POST나 PUT 요청과 비슷하게 서버 데이터의 값을 바꾸거나 추가 또는 삭제하기 위해선 `useMutation`이라는 hook이 사용됩니다. 받는 props들이 위의 `useQuery`와 동일하지만 그 외에 또 다른 하나의 `mutate` 또는 `mutateAsync`이라는 props를 받습니다. `mutate` 또는 `mutateAsync`는 함수 형태이며 `useMutation`을 실행할수 있게 도와줍니다.
 
 - <b>mutationFn</b> : queryFn과 같이 Promise 처리가 이뤄지는 함수로 서버에 api를 요청하는 코드입니다. 하나의 props를 받을수 있으며 이 값을 함수에 전달하여 사용할수 있습니다.
 - <b>onSuccess</b> : 예상대로 작동했을때 실행되는 함수입니다. `onSuccess`를 사용하지 않는다면 `mutationFn`이 랜더된 후에도 화면에 바뀐 결과가 나타나지 않을겁니다. 그 이유로는 mutation은 단순히 `uniquekeyname`을 가지고 있는 값을 바꾸어버릴 뿐 다시 `fetch` 해오지 않기 때문입니다. `onSuccess`가 실행될때 세개의`props`를 받는데요. `data`는 결과값을 나타내고 `props`는 `mutationFn`에서 전달했던 값과 같은 값을 받습니다. 마지막으로 `context`는 `onMutate` 함수에서 return 하는 값을 뜻합니다.
 
-  - queryClient.invalidateQueries : queryKey를 사용해 값을 다시 refetch를 할수 있습니다.
+  - `queryClient.invalidateQueries` : queryKey를 사용해 값을 다시 refetch를 할수 있습니다.
 
 - <b>onError</b> : 예상대로 작동하지 않았을때 실행되는 함수입니다.
 - <b>onSettled</b> : 위의 `onError`과 `onSuccess`와 다르게 4개의 props를 받아내며 `data`와 `error`을 다 전달 받을수 있습니다.
@@ -156,7 +153,8 @@ POST나 PUT 요청과 비슷하게 서버 데이터의 값을 바꾸거나 추�
 ```
   const queryClient = useQueryClient();
 
-  const {data, error, status,isIdle, isSuccess, isError, mutate } = useMutation({
+  const {data, error, status,isIdle, isSuccess, isError, mutate } =
+  useMutation({
     mutationFn: (props) => wait(1000).then(() => POSTS.push({ id: 1, props })),
     onSuccess: (data, props, context) => {
       queryClient.invalidateQueries(["posts"]);
@@ -176,7 +174,7 @@ POST나 PUT 요청과 비슷하게 서버 데이터의 값을 바꾸거나 추�
 
   return (
       <button onClick={()=> mutate('New post') } />
-      <button onClick={()=> mutateAsync('New post').then(()=>{}) } />
+      <button onClick={()=> mutateAsync('New post').then(()=>{...}) } />
   )
 ```
 
