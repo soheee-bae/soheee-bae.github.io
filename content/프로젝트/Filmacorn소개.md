@@ -64,17 +64,17 @@ Frontend 개발, 디자인, 애니매이션에만 집중할수 있는 프로젝�
 
 <div style="width:100%; margin:auto; text-align:center;">
 
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog//gatsbyBlogDesignI.png)
+![filmacornDesignI](../../assets/images/project/Filmacorn/filmacornDesignI.png)
 
-##### 메인 페이지 + 목차
+##### 메인 페이지 
 
 </div>
 
 <div style="width:100%; margin:auto; text-align:center;">
 
-![gatsbyBlogDesignII](../../assets/images/project/gatsbyBlog/gatsbyBlogDesignII.png)
+![filmacornDesignII](../../assets/images/project/Filmacorn/filmacornDesignII.png)
 
-##### 게시글 디테일 페이지
+##### 영화 디테일 페이지
 
 </div>
 
@@ -82,12 +82,38 @@ Frontend 개발, 디자인, 애니매이션에만 집중할수 있는 프로젝�
 
 ### 🗓️ 개발 기간 & 일정
 
-<b>[1주차]</b> 2023.01.03 - 01.10
+<b>[1주차]</b> 2023.02.09 - 02.12
 
-<b>[2주차]</b> 2023.01.10 - 01.17
+- Initial Set up
+  - Prettier과 eslint 추가 
+  - global scss file 추가 
+    - breakpoint.scss
+    - colors.scss
+    - global.scss
+    - mixins.scss
+    - size.scss
+    - typography.scss
+- Atom과 Molecule 컴포넌트 개발
+- Footer과 Navbar 컴포넌트 개발 및 큰 레이아웃 스타일링
+
+<b>[2주차]</b> 2023.02.12 - 01.14
+- 홈페이지 개발 
+  - TMDB를 활용한 data fetching set up
+  - Category 기준으로 나뉜 영화 리스트
+  - Carousel 애니매이션 추가 및 영화 카드 컴포넌트 스타일링과 애니매이션 추가
+
+
+
+
 
 <b>[3주차]</b> 2023.01.17 - 01.24
 
+- 페이지네이션 기능 구현
+- 라이트모드 다크모드 기능 구현
+- 목차 기능 구현
+
 <b>[4주차]</b> 2023.01.24 - 01.31
+
+- 기능추가 및 리팩토링
 
 <br/>
