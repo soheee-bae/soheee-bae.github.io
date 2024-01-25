@@ -54,21 +54,11 @@ Frontend 개발, 디자인, 애니매이션에만 집중할수 있는 프로젝�
 
 </div>
 
-<div style="width:100%; margin:auto; text-align:center;">
-
-![gatsbyBlog메뉴구조도](../../assets/images/project/gatsbyBlog/gatsbyBogMenus.png)
-
-##### 메뉴 구조도
-
-</div>
-
 <br/>
 
 ### 🎨 디자인
 
-프로젝트 목표와 위의 기획 만큼 프론트엔드 개발자로 중요한게 디자인인데요. 이 프로젝트에서 Figma를 이용해서 디자인했습니다.
-
-디자인을 할때 Responsive하게 사용할수 있는 웹 디자인에 중점을 두었고 깔끔하게 Black and White 테마를 사용했습니다.
+이번 프로젝트에서는 현재 미국에서 운영되고 있는 영화 서비스 웹사이트 디자인을 참고하게 되었습니다. 웹사이트의 전체적인 Theme 색부터  큰 layout과 디테일한 디자인을 참고했고 조금 더 나은 사용자 경험을 위해서 컴포넌트에 간단한 hover 또는 dropdown animation를 추가하였습니다. 
 
 <br/>
 
