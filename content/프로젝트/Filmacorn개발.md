@@ -1,6 +1,6 @@
 ---
 title: "[프로젝트] Filmacorn 개발"
-date: 2023-02-09
+date: 2023-03-03
 subtitle: "Filmacorn 개발과정을 담아봤습니다."
 category: "프로젝트"
 tags:
@@ -9,7 +9,7 @@ tags:
   - next.js
 background: "project/gatsbyBlog/gatsbyBlogBackground.png"
 emoji: "🎬"
-draft: true
+draft: false
 ---
 
 <br/>
@@ -54,12 +54,19 @@ draft: true
 
 </div>
 
-<br/>
-<br/>
-
 ### 프로젝트를 진행하면서
 
--
+- 깔끔한 폴더 구조
+- TypeScipt 추가
+  - 이번 프로젝트에서는 TypeScript를 포함 시켜서 진행하였습니다. 많은 양의 데이터들을 받아서 사용하는 프로젝트 였기에 props에 대한 type들을 확실히 하여 보다 안정적인 개발과 코드 품질을 높이고 싶었습니다.
+- Carousel 기능 및 디테일한 애니매이션 추가
+  - hover, dropdown, carousel
+- 반응형 웹
+- 재사용성 컴포넌트
+- TMDB API를 활용한 Data Fetching
+- Toast를 이용한 snackbar
+- LoadingSpinner을 이용한 로딩 시간
+- Nextjs를 사용한 GetServerSideProps
 
 <br/>
 

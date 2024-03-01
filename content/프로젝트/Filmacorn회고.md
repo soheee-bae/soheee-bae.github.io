@@ -1,6 +1,6 @@
 ---
 title: "[프로젝트] Filmacorn 회고"
-date: 2023-02-09
+date: 2023-03-10
 subtitle: "Filmacorn를 끝낸후 제 생각들을 적었습니다."
 category: "프로젝트"
 tags:
@@ -9,7 +9,7 @@ tags:
   - next.js
 background: "project/gatsbyBlog/gatsbyBlogBackground.png"
 emoji: "🎬"
-draft: true
+draft: false
 ---
 
 </br>
