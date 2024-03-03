@@ -11,87 +11,7 @@ emoji: "🔖"
 draft: false
 ---
 
-</br>
-
-<div style="position:relative; width:100%; margin:auto; text-align:center;">
-
-<div style="float:left; width:48%; margin:auto; text-align:center;">
-
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_MainLight.png)
-
-</div>
-
-<div style="float:right; width:48%; margin:auto; text-align:center;">
-
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_Main2Light.png)
-
-</div>
-
-<div style="float:left; width:48%; margin:auto; text-align:center;">
-
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_PostsLight.png)
-
-</div>
-
-<div style="float:right; width:48%; margin:auto; text-align:center;">
-
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_Posts2Light.png)
-
-</div>
-
-</div>
-
-<div style="float:left; width:100%; margin:auto; text-align:center;">
-
-##### 라이트 모드
-
-</div>
-
-<div style="position:relative; width:100%; margin:auto; text-align:center;">
-
-<div style="float:left; width:48%; margin:auto; text-align:center;">
-
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_MainDark.png)
-
-</div>
-
-<div style="float:right; width:48%; margin:auto; text-align:center;">
-
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_Main2Dark.png)
-
-</div>
-
-<div style="float:left; width:48%; margin:auto; text-align:center;">
-
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_PostsDark.png)
-
-</div>
-
-<div style="float:right; width:48%; margin:auto; text-align:center;">
-
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_Posts2Dark.png)
-
-</div>
-
-</div>
-
-<div style="float:left; width:100%; margin:auto; text-align:center;">
-
-##### 다크 모드
-
-</div>
-
-<div style="float:left; width:100%; margin:auto;">
-
 <br/>
-
-### 프로젝트 결과물
-
-🔗 Github : https://github.com/soheee-bae/Gatsby-Image-Blog-Starter
-
-🚀 Demo : https://gatsbyimageblogstartermain.gatsbyjs.io/
-
-</br>
 
 ### 프로젝트를 끝내고
 
@@ -121,3 +41,5 @@ draft: false
 ### 무엇을 배웠고 어떤 부분이 성장했나?
 
 </div>
+
+<br/>

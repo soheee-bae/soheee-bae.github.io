@@ -1,5 +1,5 @@
 ---
-title: "[프로젝트] Gatsby Blog Starter V2"
+title: "[프로젝트] Gatsby Blog Starter V2 개발"
 date: 2023-04-22
 subtitle: "Gatsby Blog Starter v2로 업데이트하는 과정을 담았습니다."
 category: "프로젝트"
@@ -13,53 +13,29 @@ draft: false
 
 </br>
 
-## Gatsby Blog Starter의 문제점과 V2로 업데이트하기 까지
-
-Gatsby Blog Starter이 끝난 이 시점 제가 막상 이 스타터를 쓰려고 하니 부족한 점들이 하나하나씩 보이기 시작했고 고치고 싶은 점들이 생겼습니다.
-
-#### 목차의 불편함
-
-- 목차의 존재가 블로그의 기능성을 높여주는건 맞지만 디자인에서 불편함을 느꼈습니다. 목차가 모든 페이지의 왼쪽부분을 차지 했기에 반응형 레이아웃에 대한 신경을 많이 써야했고 메인 컨텐츠 공간이 애매해졌습니다. 이로 목차를 제거함과 동시에 상단 내비게이션 바를 사용하는게 더 좋은 결정이라고 생각했습니다.
-
-#### 좀 더 많았으면 하는 formatter
-
-- Formatter을 늘림으로써 사용자가 원하는 블로그 게시글의 태그나 카테고리, 날짜등 보다 정확한 게시글의 정보를 알수 있었으면 좋겠다고 생각했습니다.
-
-#### 개성있는 각각의 블로그 게시글
-
-- 여기저기 참고 블로그들을 찾아보다가 제가 자주 쓰는 노션이 눈에 들어왔습니다. 노션에서는 페이지 상단마다 사용자가 아이콘을 넣고 배경화면을 넣을수 있는 시스템이 있는데요. 저도 이미지와 이모트콘을 위 배경화면에 넣음으로 각 페이지마다 조금 다르게 꾸밀수 있는 기능을 주면 어떨까 라는 생각이 있었습니다.
-
-#### Filtering과 Search 기능 추가
-
-- 프로젝트 v1에 대한 회고를 하는 부분에서 추가하고 싶었던 기능중에 하나였던 블로그 게시글 filtering과 search 기능을 추가하여 조금더 블로그 실용성을 높이고 싶었습니다.
-
-#### 애니매이션 추가
-
-- Hover을 하거나 스크린 스크롤을 할때 스타일에 어느정도의 애니매이션을 추가함으로써 블로그 탬플릿에 좀 더 생동감을 주고 싶었습니다.
-
-</br>
-
-## 프로젝트 상세 소개
-
-<br/>
-
-### 🎨 디자인
-
 <div style="position:relative; width:100%; margin:auto; text-align:center;">
 
 <div style="float:left; width:48%; margin:auto; text-align:center;">
 
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/gatsbyBlogV2DesignI.png)
-
-##### 메인 페이지
+![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_MainLight.png)
 
 </div>
 
 <div style="float:right; width:48%; margin:auto; text-align:center;">
 
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/gatsbyBlogV2DesignII.png)
+![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_Main2Light.png)
 
-##### 게시글 메인 페이지
+</div>
+
+<div style="float:left; width:48%; margin:auto; text-align:center;">
+
+![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_PostsLight.png)
+
+</div>
+
+<div style="float:right; width:48%; margin:auto; text-align:center;">
+
+![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_Posts2Light.png)
 
 </div>
 
@@ -67,13 +43,41 @@ Gatsby Blog Starter이 끝난 이 시점 제가 막상 이 스타터를 쓰려�
 
 <div style="float:left; width:100%; margin:auto; text-align:center;">
 
-<div style="width:48%; margin:auto; text-align:center;">
-
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/gatsbyBlogV2DesignIII.png)
-
-##### 게시글 디테일 페이지
+##### 라이트 모드
 
 </div>
+
+<div style="position:relative; width:100%; margin:auto; text-align:center;">
+
+<div style="float:left; width:48%; margin:auto; text-align:center;">
+
+![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_MainDark.png)
+
+</div>
+
+<div style="float:right; width:48%; margin:auto; text-align:center;">
+
+![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_Main2Dark.png)
+
+</div>
+
+<div style="float:left; width:48%; margin:auto; text-align:center;">
+
+![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_PostsDark.png)
+
+</div>
+
+<div style="float:right; width:48%; margin:auto; text-align:center;">
+
+![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_Posts2Dark.png)
+
+</div>
+
+</div>
+
+<div style="float:left; width:100%; margin:auto; text-align:center;">
+
+##### 다크 모드
 
 </div>
 
@@ -81,40 +85,36 @@ Gatsby Blog Starter이 끝난 이 시점 제가 막상 이 스타터를 쓰려�
 
 <br/>
 
-이번 V2로 업데이트를 하면서 디자인 변화를 크게 주었습니다.
+### 프로젝트를 진행하면서
 
-### 🚩 업데이트 또는 추가 기능
+<br/>
+
+### 개인 프로젝트
+
+프론트엔드 개발, 디자인, 기획
+
+<br/>
+
+### 활용한 기술스택
+
+Gatsby, Graphql, React, SCSS
+
+<br/>
+
+### 프로젝트 결과물
+
+🔗 Github : https://github.com/soheee-bae/Gatsby-Image-Blog-Starter
+
+🚀 Demo : https://gatsbyimageblogstartermain.gatsbyjs.io/
+
+<br/>
+
+### 🚩 업데이트 또는 추가 목적으로 구현한 기능
 
 - 내비게이션 바
+- 프로젝트 전체 UI
 - 게시글 디테일 페이지 디자인
 - 상단 이미지를 이용한 홈페이지와 게시글 페이지
 - 게시글 Filtering과 Search 기능
 - hover과 스크린 스크롤에 대한 애니매이션
 - 게시글 리스트 디자인
-
-<br/>
-
-### 🗓️ 개발 기간 & 일정
-
-<b>[1주차]</b> 2023.01.03 - 01.10
-
-- UX/UI 디자인
-- 세부 기획
-
-<b>[2주차]</b> 2023.01.10 - 01.17
-
-- Initial Set up
-- Atom과 Molecule 컴포넌트 개발
-- Page 컴포넌트 개발 및 큰 레이아웃 스타일링
-
-<b>[3주차]</b> 2023.01.17 - 01.24
-
-- 페이지네이션 기능 구현
-- 라이트모드 다크모드 기능 구현
-- 목차 기능 구현
-
-<b>[4주차]</b> 2023.01.24 - 01.31
-
-- 기능추가 및 리팩토링
-
-</div>
