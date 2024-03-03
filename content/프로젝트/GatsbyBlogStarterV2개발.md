@@ -13,7 +13,7 @@ draft: false
 
 </br>
 
-## 이 프로젝트를 시작하기 까지
+## Gatsby Blog Starter의 문제점과 V2로 업데이트하기 까지
 
 Gatsby Blog Starter이 끝난 이 시점 제가 막상 이 스타터를 쓰려고 하니 부족한 점들이 하나하나씩 보이기 시작했고 고치고 싶은 점들이 생겼습니다.
 
@@ -49,7 +49,7 @@ Gatsby Blog Starter이 끝난 이 시점 제가 막상 이 스타터를 쓰려�
 
 <div style="float:left; width:48%; margin:auto; text-align:center;">
 
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/gatsbyBlogV2DesignI.jpg)
+![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/gatsbyBlogV2DesignI.png)
 
 ##### 메인 페이지
 
@@ -57,7 +57,7 @@ Gatsby Blog Starter이 끝난 이 시점 제가 막상 이 스타터를 쓰려�
 
 <div style="float:right; width:48%; margin:auto; text-align:center;">
 
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/gatsbyBlogV2DesignII.jpg)
+![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/gatsbyBlogV2DesignII.png)
 
 ##### 게시글 메인 페이지
 
@@ -69,7 +69,7 @@ Gatsby Blog Starter이 끝난 이 시점 제가 막상 이 스타터를 쓰려�
 
 <div style="width:48%; margin:auto; text-align:center;">
 
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/gatsbyBlogV2DesignIII.jpg)
+![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/gatsbyBlogV2DesignIII.png)
 
 ##### 게시글 디테일 페이지
 
@@ -81,6 +81,8 @@ Gatsby Blog Starter이 끝난 이 시점 제가 막상 이 스타터를 쓰려�
 
 <br/>
 
+이번 V2로 업데이트를 하면서 디자인 변화를 크게 주었습니다.
+
 ### 🚩 업데이트 또는 추가 기능
 
 - 내비게이션 바
@@ -89,5 +91,30 @@ Gatsby Blog Starter이 끝난 이 시점 제가 막상 이 스타터를 쓰려�
 - 게시글 Filtering과 Search 기능
 - hover과 스크린 스크롤에 대한 애니매이션
 - 게시글 리스트 디자인
+
+<br/>
+
+### 🗓️ 개발 기간 & 일정
+
+<b>[1주차]</b> 2023.01.03 - 01.10
+
+- UX/UI 디자인
+- 세부 기획
+
+<b>[2주차]</b> 2023.01.10 - 01.17
+
+- Initial Set up
+- Atom과 Molecule 컴포넌트 개발
+- Page 컴포넌트 개발 및 큰 레이아웃 스타일링
+
+<b>[3주차]</b> 2023.01.17 - 01.24
+
+- 페이지네이션 기능 구현
+- 라이트모드 다크모드 기능 구현
+- 목차 기능 구현
+
+<b>[4주차]</b> 2023.01.24 - 01.31
+
+- 기능추가 및 리팩토링
 
 </div>
