@@ -7,7 +7,7 @@ tags:
   - project
   - typeScript
   - next.js
-background: "project/gatsbyBlog/gatsbyBlogBackground.png"
+background: "project/Filmacorn/Filmacorn_background.png"
 emoji: "🎬"
 draft: false
 ---
