@@ -62,13 +62,17 @@ React 라이브러리의 프레임워크인 Next.js를 추가해서 프로젝트
 
 매번 자동으로 업데이트 되는 TMDB 최신 데이터를 가져오기 위해서 getServersideProps를 주로 사용해서 데이터들을 가져와 사용했습니다.
 
-<b>TypeScript 추가</b>
+<br/>
 
-이번 프로젝트에서는 TypeScript를 포함 시켜서 진행하였습니다. 많은 양의 데이터들을 받아서 사용하는 프로젝트 였기에 props에 대한 type들을 확실히 하여 보다 안정적인 개발과 코드 품질을 높이고 싶었습니다.
+<b>TypeScript 추가</b>
 
 ![Filmacorn_ts](../../assets/images/project/Filmacorn/Filmacorn_ts2.png)
 
 ![Filmacorn_ts2](../../assets/images/project/Filmacorn/Filmacorn_ts.png)
+
+이번 프로젝트에서는 TypeScript를 포함 시켜서 진행하였습니다. 많은 양의 데이터들을 받아서 사용하는 프로젝트 였기에 props에 대한 type들을 확실히 하여 보다 안정적인 개발과 코드 품질을 높이고 싶었습니다.
+
+<br/>
 
 <b>깔끔한 폴더 구조</b>
 
@@ -76,11 +80,15 @@ React 라이브러리의 프레임워크인 Next.js를 추가해서 프로젝트
 
 TypeScript 추가 및 많은 양의 페이지와 컴포넌트, hooks와 helper 함수들을 관리 하기 위해 깔끔한 폴더 구조에 신경을 썼습니다.
 
+<br/>
+
 <b>Carousel 기능 및 디테일한 애니매이션 추가</b>
 
 ![Filmacorn_animation](../../assets/images/project/Filmacorn/Filmacorn_animation.png)
 
 기본적인 UI에 신경써서 개발하기보다는 사용자 경험을 향상 시키자는 목적이 있었기에 다양한 컴포넌트에 애니매이션을 넣었습니다. 주로 애니매이션은 css animation의 transition과 translate를 사용해서 hover 또는 dropdown 애니매이션 효과를 넣었고 carousel 효과를 위해서 오픈 라이브러리중 하나를 사용하게 되었습니다.
+
+<br/>
 
 <b>반응형 웹</b>
 
@@ -91,6 +99,8 @@ TypeScript 추가 및 많은 양의 페이지와 컴포넌트, hooks와 helper �
 </div>
 
 단순히 웹 스크린 사이즈에서 사용하기 적합한 웹 사이트 보다는 모바일에서도 사용이 가능한 반응형 웹을 구현하였습니다.
+
+<br/>
 
 <b>재사용성 컴포넌트</b>
 
@@ -129,11 +139,15 @@ Size, Variant, startIcon, endIcon 등의 props들을 통해서 다양한 사이�
   </Button>
 ```
 
+<br/>
+
 <b>Toast를 이용한 snackbar</b>
 
 ![Filmacorn_toast](../../assets/images/project/Filmacorn/Filmacorn_toast.png)
 
 에러메세지나 알림 등을 보여줄 때 유용하게 쓰이는 토스트 메세지를 구현했습니다. React-toastify 라이브러리를 사용해 구현하였고 주로 사용자가 watchlist에 영화를 저장하거나 지울때 알려주기 위해서 사용하였습니다.
+
+<br/>
 
 <b>LoadingSpinner을 이용한 로딩 시간</b>
 
