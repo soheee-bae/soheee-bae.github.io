@@ -1,6 +1,6 @@
 ---
 title: "[프로젝트] Gatsby Blog Starter 회고"
-date: 2023-01-31
+date: 2023-02-06
 subtitle: "Gatsby Blog Starter 프로젝트를 완성한후의 제 생각들을 적었습니다."
 category: "프로젝트"
 tags:

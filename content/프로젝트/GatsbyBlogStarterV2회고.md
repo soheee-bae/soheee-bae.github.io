@@ -1,6 +1,6 @@
 ---
 title: "[프로젝트] Gatsby Blog Starter V2 회고"
-date: 2023-04-22
+date: 2023-04-28
 subtitle: "Gatsby Blog Starter v2 업데이트 후의 생각들을 정리해보았습니다."
 category: "프로젝트"
 tags:
