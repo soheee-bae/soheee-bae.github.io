@@ -101,9 +101,13 @@ draft: false
 
 ### 💭 기억에 남는 구현
 
-<b>Filtering과 Search 기능</b>
+<div style="width:100%; margin:auto; text-align:center;">
 
-이전 버전의 프로젝트에서 제일 많은 신경을 썼었던 기능은 목차 기능이였는데요. 이번 업데이트 과정중 단순히 목차 기능을 제거하는것 보단 조금 더 실용성있고 활용도가 높은 대체 기능을 구현하고 싶었습니다. 고민끝에 나온 결정은 게시글 filtering과 search 기능 추가였습니다. 사용자들이 조금 더 쉽게 찾고자하는 게시글을 찾거나 게시글들을 카테고리 또는 태그를 기준으로 필터링 할수 있는 기능을 구현하는게 좋겠다고 생각했습니다. 이전 버전의 목차와는 다르게 graphql을 사용해서 파일 구조를 파악해 자동으로 목차를 만들기 보단 사용자가 게시글을 작성할때 마다 frontmatter중 하나인 `category` 또는 `tags`에 직접 입력해 그 기준으로 filtering 할수 있게 만들었습니다.
+![gatsbyBlogFiltering](../../assets/images/project/gatsbyBlog/gatsbyBlogFiltering.png)
+
+</div>
+
+이전 버전의 프로젝트에서 제일 많은 신경을 썼었던 기능은 목차 기능이였는데요. 이번 업데이트 과정중 단순히 목차 기능을 제거하는것 보단 조금 더 실용성있고 활용도가 높은 대체 기능을 구현하고 싶었습니다. 고민끝에 나온 결정은 게시글 <b>filtering과 search 기능</b> 추가였습니다. 사용자들이 조금 더 쉽게 찾고자하는 게시글을 찾거나 게시글들을 카테고리 또는 태그를 기준으로 필터링 할수 있는 기능을 구현하는게 좋겠다고 생각했습니다. 이전 버전의 목차와는 다르게 graphql을 사용해서 파일 구조를 파악해 자동으로 목차를 만들기 보단 사용자가 게시글을 작성할때 마다 frontmatter중 하나인 `category` 또는 `tags`에 직접 입력해 그 기준으로 filtering 할수 있게 만들었습니다.
 
 </br>
 
@@ -111,17 +115,13 @@ draft: false
 
 ```
 // 업데이트 전
----
 title: "More About Blog"
 date: 2023-02-06 9:51:13
 subtitle: "Do you want to know more about Gatsby Clean Blog Starter?"
 category: "Blog"
 draft: false
----
 
-
-// 업데이트 후 
----
+// 업데이트 후
 title: "More About Blog"
 date: 2023-02-06 9:51:13
 subtitle: "Do you want to know more about Gatsby Clean Blog Starter?"
@@ -132,7 +132,6 @@ tags:
 background: "stickyNote.jpeg"
 emoji: "🐥"
 draft: false
----
 ```
 
 디자인에 중점을 두어 업데이트를 했던 만큼 새로운 디자인을 구현하는데 많은 시간을 썼습니다. 목차부분을 제거 하겠다는 결정과 동시에 블로그 전체 레이아웃에 큰 UI 변경을 주어야 했고 제가 원하던 각각의 개성있는 블로그 게시글 페이지를 만들기 위해선 `frontmatter`의 수가 이전 버전보다 더 많아야 했습니다. 여기서 제일 고민했었던 부분은 `frontmatter`의 수를 늘리는 동시에 주어진 `frontmatter`들을 모두 다 활용하여 어떻게 한 페이지에 깔끔한 UI로 다 보여지게 할 수 있을까 였는데요. 그 답을 찾기 위해서 많은 검색들을 하게 되었습니다.
