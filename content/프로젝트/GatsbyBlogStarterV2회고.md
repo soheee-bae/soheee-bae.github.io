@@ -17,7 +17,7 @@ draft: false
 
 🔗 Github : https://github.com/soheee-bae/Gatsby-Image-Blog-Starter
 
-🚀 Demo : https://gatsbyimageblogstartermain.gatsbyjs.io/
+🚀 Demo : https://gatsby-image-blog-starter.netlify.app/
 
 <br/>
 

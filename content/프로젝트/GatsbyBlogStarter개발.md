@@ -33,7 +33,7 @@ draft: false
 
 - 가독성을 높이고 사용자들이 쉽게 하드코딩된 문자열과 숫자들을 변경할수 있게 하기 위해서 `constrants` 폴더에 나열하고 정리하였습니다.
 - 쉬운 스타일 커스터마이징을 위해 `styles` 폴더에 모든 스타일링을 정리하였습니다.
-- 여러가지의 hook을 포함시키면서 props를 넘겨주는 방법을 최소화하고 페이지네이션과 목차 선택 값등을 여러 컴포넌트에서 쉽게 접근할수 있도록 하였습니다.  
+- 여러가지의 hook을 포함시키면서 props를 넘겨주는 방법을 최소화하고 페이지네이션과 목차 선택 값등을 여러 컴포넌트에서 쉽게 접근할수 있도록 하였습니다.
 - Graphql plugin을 활용해서 이미지와 파일시스템등을 관리하였습니다.
 - 아토믹 디자인 패턴을 활용하여 컴포넌트 단위 개발과 반응형으로 디자인하여 개발하였습니다.
 
@@ -55,7 +55,7 @@ Gatsby, Graphql, React, SCSS
 
 🔗 Github : https://github.com/soheee-bae/Gatsby-Clean-Blog-Starter
 
-🚀 Demo : https://gatsbycleanblogstarterkit.gatsbyjs.io/
+🚀 Demo : https://gatsby-clean-blog-starter.netlify.app/
 
 <br/>
 
