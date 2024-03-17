@@ -5,7 +5,7 @@ import "./index.scss";
 import { useCategory } from "../../hooks/useCategory";
 import { CATEGORY } from "../../constants";
 
-const Categories = () => {
+const Categories = ({ handlePageChange }) => {
   const { handleSelect, selectedCategory } = useCategory();
   const categoriesQuery = useStaticQuery(graphql`
     query CategoriesQuery {
@@ -44,7 +44,10 @@ const Categories = () => {
             key={category}
             className="category"
             data-selected={selectedCategory === category}
-            onClick={() => handleSelect(category)}
+            onClick={() => {
+              handlePageChange(1);
+              handleSelect(category);
+            }}
           >
             {category}
           </div>

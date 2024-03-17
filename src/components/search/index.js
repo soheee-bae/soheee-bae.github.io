@@ -2,7 +2,7 @@ import React from "react";
 import "./index.scss";
 import { Search } from "../../../assets/icons/search";
 
-export const SearchField = ({ setSearch }) => {
+export const SearchField = ({ setSearch, handlePageChange }) => {
   var typewatch = (function () {
     var timer = 0;
     return function (callback, ms) {
@@ -19,6 +19,7 @@ export const SearchField = ({ setSearch }) => {
         placeholder="검색어"
         onKeyUp={(e) => {
           typewatch(() => {
+            handlePageChange(1);
             setSearch(e.target.value);
           }, 500);
         }}

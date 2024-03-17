@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import "./index.scss";
 import { useTag } from "../../hooks/useTag";
 
-const Tags = () => {
+const Tags = ({ handlePageChange }) => {
   const { handleSelect, selectedTag } = useTag();
 
   const tagsQuery = useStaticQuery(graphql`
@@ -39,7 +39,10 @@ const Tags = () => {
         <div
           key={tag}
           className="tag"
-          onClick={() => handleSelect(tag)}
+          onClick={() => {
+            handlePageChange(1);
+            handleSelect(tag);
+          }}
           data-selected={selectedTag.includes(tag)}
         >
           #{tag}

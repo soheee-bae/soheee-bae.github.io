@@ -41,9 +41,12 @@ export default function Posts({ data }) {
       subtitle={'"Check out all the posts"'}
     >
       <div className="postsContainer">
-        <SearchField setSearch={setSearch} />
-        <Categories />
-        <Tags />
+        <SearchField
+          setSearch={setSearch}
+          handlePageChange={handlePageChange}
+        />
+        <Categories handlePageChange={handlePageChange} />
+        <Tags handlePageChange={handlePageChange} />
         <hr />
         <ContentListPagination
           filteredPosts={filteredPosts}
