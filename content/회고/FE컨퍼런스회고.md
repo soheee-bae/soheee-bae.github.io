@@ -11,3 +11,29 @@ draft: false
 ---
 
 한국으로 정착하면서 많은걸 계획하고 기대했었지만 그 중 하나였던 건 한국에서 주최되는 다양한 개발자 행사였다. 미국에서 열리는 개발자 행사들은 아무래도 땅이 넓다 보니 대부분은 온라인으로 이뤄지거나 멀리 있는 탓에 참여를 하지 못했었다. 직접 참석해 사람들을 만나며 같은 분야에서 일하는 사람들과 알아가고 그 과정에서 배우는 것을 직접 경험해보고 싶었기에 지인의 추천으로 이번 FEconf 2023에 참여할수 있게 되었다.
+
+<div style="width:100%; margin:auto;">
+
+![FEconf2023_1](../../assets/images/retrospect/FEconf2023_1.png)
+
+</div>
+<div style="width:100%; margin:auto;">
+
+![FEconf2023_2](../../assets/images/retrospect/FEconf2023_2.png)
+
+</div>
+<div style="width:100%; margin:auto;">
+
+![FEconf2023_3](../../assets/images/retrospect/FEconf2023_3.png)
+
+</div>
+<div style="width:100%; margin:auto;">
+
+![FEconf2023_4](../../assets/images/retrospect/FEconf2023_4.png)
+
+</div>
+<div style="width:100%; margin:auto;">
+
+![FEconf2023_5](../../assets/images/retrospect/FEconf2023_5.png)
+
+</div>
