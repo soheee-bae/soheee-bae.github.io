@@ -4,7 +4,9 @@ date: 2023-06-11
 subtitle: "R3F의 OrbitControls, Light, Custom geometry, Camera에 대한 정보들을 정리했습니다. "
 category: "React Three Fiber"
 tags:
+  - webgl
   - r3f
+  - threejs
 background: "r3f/r3f-livingroom.jpeg"
 emoji: "🔬"
 draft: false

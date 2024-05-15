@@ -4,6 +4,7 @@ date: 2023-06-07
 subtitle: "Three.js와 React Three Fiber중 R3F를 선택한 이유와 장점을 적어 보았습니다."
 category: "React Three Fiber"
 tags:
+  - webgl
   - r3f
   - threejs
 background: "r3f/r3f-livingroom.jpeg"

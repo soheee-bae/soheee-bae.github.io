@@ -9,7 +9,7 @@ tags:
   - next.js
 background: "project/Filmacorn/Filmacorn_background.png"
 emoji: "🎬"
-draft: false
+draft: true
 ---
 
 </br>

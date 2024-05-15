@@ -4,6 +4,8 @@ date: 2023-06-06
 subtitle: "Three.js의 기본적인 정보들을 정리해 보았습니다."
 category: "React Three Fiber"
 tags:
+  - webgl
+  - r3f
   - threejs
 background: "r3f/r3f-livingroom.jpeg"
 emoji: "🦶🏻"
