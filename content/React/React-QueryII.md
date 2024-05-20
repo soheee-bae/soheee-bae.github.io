@@ -189,17 +189,23 @@ React Query Devtools는 React Query의 장점중의 하나인 강력한 내장 �
 
 ```
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+// install 하는 방법: 
+// npm i @tanstack/react-query-devtools
+
+const queryClient = new QueryClient();
 
 ...
 
 return
-  <QueryClientProvider client ={queryClient}>
-    //initialIsOpen : open된 채로 시작
-    //position : devtools를 열 수 있는 logo 위치 - 우측 하단으로 지정
+  <QueryClientProvider client={queryClient}>
+    // initialIsOpen : open된 채로 시작
+    // position : devtools를 열 수 있는 logo 위치 - 우측 하단으로 지정
     <ReactQueryDevtools initialIsOpen={false} position='bottom-right' />
   </QueryClientProvider>
 ```
 
 //사진 넣기
 
-npm i @tanstack/react-query-devtools
+
