@@ -182,17 +182,23 @@ POST나 PUT 요청과 비슷하게 서버 데이터의 값을 바꾸거나 추�
 
 ## Devtool
 
-React Query Devtools는 React Query의 장점중의 하나인 강력한 내장 개발 도구입니다.
-사용중인 모든 쿼리 상태들을 시각화하여 확인할수 있게 도와주고 에러가 생기거나 예상대로 작동하지 않는 경우 문제를 해결할수 있게 도와줍니다.
+React Query Devtools는 React Query의 장점중의 하나인 강력한 내장 개발 도구입니다. 사용중인 모든 쿼리 상태들을 시각화하여 확인할수 있게 도와주고 에러가 생기거나 예상대로 작동하지 않는 경우 문제를 해결할수 있게 도와줍니다.
 
-사용 방법 : QueryClientProvider wrapper 안에 ReactQueryDevtools를 넣어줍니다.
+### 📌 설치방법
+
+```
+npm i @tanstack/react-query-devtools
+yarn add @tanstack/react-query-devtools
+```
+
+### 📌 사용방법
+
+`react-query`가 제공하는 `QueryClientProvider` 사이에 `ReactQueryDevtools`를 넣어줘야 합니다. 여기서 props로 client를 전달해줘야 하는데 `QueryClient`의 인스턴스를 전달해주는것으로 만족시킬 수 있습니다.
 
 ```
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { QueryClient, QueryClientProvider } from 'react-query';
 
-// install 하는 방법: 
-// npm i @tanstack/react-query-devtools
 
 const queryClient = new QueryClient();
 
@@ -200,12 +206,12 @@ const queryClient = new QueryClient();
 
 return
   <QueryClientProvider client={queryClient}>
-    // initialIsOpen : open된 채로 시작
-    // position : devtools를 열 수 있는 logo 위치 - 우측 하단으로 지정
     <ReactQueryDevtools initialIsOpen={false} position='bottom-right' />
   </QueryClientProvider>
-```
 
-//사진 넣기
+// initialIsOpen : open된 채로 시작
+// position : devtools를 열 수 있는 logo 위치 - 우측 하단으로 지정
+
+```
 
 
