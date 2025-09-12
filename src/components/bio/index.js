@@ -5,7 +5,6 @@ import { graphql, useStaticQuery } from "gatsby";
 import "./index.scss";
 import { Email } from "../../../assets/icons/email";
 import { LinkedIn } from "../../../assets/icons/linkedIn";
-import { Instagram } from "../../../assets/icons/instagram";
 import { Github } from "../../../assets/icons/github";
 
 const Bio = () => {
@@ -24,14 +23,13 @@ const Bio = () => {
           bio
           githubUrl
           blogUrl
-          instagramUrl
           emailUrl
           linkedInUrl
         }
       }
     }
   `);
-  const { author, bio, githubUrl, linkedInUrl, instagramUrl, emailUrl } =
+  const { author, bio, githubUrl, linkedInUrl, emailUrl } =
     bioQuery.site.siteMetadata;
 
   return (
@@ -57,9 +55,6 @@ const Bio = () => {
           </a>
           <a href={linkedInUrl} target="_blank">
             <LinkedIn color="var(--lg-light-black)" />
-          </a>
-          <a href={instagramUrl} target="_blank">
-            <Instagram color="var(--lg-light-black)" />
           </a>
         </div>
       </div>

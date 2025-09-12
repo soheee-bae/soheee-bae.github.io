@@ -7,7 +7,7 @@ tags:
   - javascript
 background: "javascript/ComputerScience.jpeg"
 emoji: "🖥️"
-draft: false
+draft: true
 ---
 
 </br>
@@ -47,8 +47,6 @@ function printHello(){
 
 ### 변수(Variable) 호이스팅
 
-JavaScript에서는 `var`, `let` 및 `const` 변수를 사용하여 선언할 수 있으며 각자 다른 호이스팅 개념이 적용된다. 
+JavaScript에서는 `var`, `let` 및 `const` 변수를 사용하여 선언할 수 있으며 각자 다른 호이스팅 개념이 적용된다.
 
-#### var 변수 
-
-
+#### var 변수
