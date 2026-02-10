@@ -83,6 +83,10 @@ module.exports = {
             options: {
               maxWidth: 1200,
               linkImagesToOriginal: false,
+              quality: 85,
+              withWebp: true,
+              tracedSVG: false,
+              loading: "lazy",
             },
           },
           {

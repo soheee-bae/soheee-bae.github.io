@@ -4,6 +4,8 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
 
 # Runtime data
 pids
@@ -16,20 +18,19 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
-
-# nyc test coverage
 .nyc_output
+*.lcov
 
-# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+# Grunt intermediate storage
 .grunt
 
-# Bower dependency directory (https://bower.io/)
+# Bower dependency directory
 bower_components
 
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
+# Compiled binary addons
 build/Release
 
 # Dependency directories
@@ -52,18 +53,109 @@ typings/
 *.tgz
 
 # dotenv environment variable files
-.env*
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
 
-# gatsby files
+# Gatsby files
 .cache/
-public
+.cache-loader/
+public/
 
-# Mac files
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+.vscode-test
+
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+*.stackdump
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+tmp/
+temp/
+
+# Build outputs
+dist/
+build/
+out/
 
 # Yarn
 yarn-error.log
 .pnp/
 .pnp.js
-# Yarn Integrity file
 .yarn-integrity
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Turbo
+.turbo
+
+# Vercel
+.vercel
+
+# Next.js (if you ever migrate)
+.next/
+out/
+
+# Nuxt.js (if you ever migrate)
+.nuxt
+.output
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Storybook build outputs
+storybook-static
+
+# Large media files (consider using Git LFS or external CDN)
+# Uncomment if you want to exclude large assets from git
+# assets/videos/*.mp4
+# assets/images/**/*.png
+# assets/images/**/*.jpg
+# assets/images/**/*.jpeg
+
+# Optimized/compressed versions
+assets/**/*.webp
+assets/**/*.optimized.*
