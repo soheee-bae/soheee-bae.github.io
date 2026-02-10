@@ -11,12 +11,12 @@ module.exports = {
 
     githubUrl: "https://github.com/soheee-bae",
     blogUrl: "https://soheee-bae.github.io/",
-    emailUrl: "mailto: baesoheee@gmail.com",
+    emailUrl: "mailto: baesohee28@gmail.com",
     linkedInUrl: "https://www.linkedin.com/in/bae-sohee-b37a9a166/",
 
     homePageBackground: "workspace_white.jpeg",
-    aboutPageBackground: "coffee.jpeg",
-    postsPageBackground: "stickyNote.jpeg",
+    aboutPageBackground: "aboutme.jpeg",
+    postsPageBackground: "blog.jpeg",
   },
   plugins: [
     {
