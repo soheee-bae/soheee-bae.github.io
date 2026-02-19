@@ -1,7 +1,7 @@
 ---
 title: "Execution Context와 Hoisting"
 date: 2025-02-03
-subtitle: "자바스크립트의 호이스팅(Hoisting) 이해하기"
+subtitle: ""
 category: "JavaScript"
 tags:
   - javascript

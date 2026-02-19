@@ -1,11 +1,11 @@
 ---
 title: "var / let / const & TDZ"
 date: 2026-02-06
-subtitle: "웹페이지가 사용자에게 보여지기까지의 과정을 적어보았습니다. "
+subtitle: ""
 category: "JavaScript"
 tags:
   - javascript
-background: "r3f/r3f-livingroom.jpeg"
+background: "javascript/ComputerScience.jpeg"
 emoji: "🖥️"
 draft: true
 ---
