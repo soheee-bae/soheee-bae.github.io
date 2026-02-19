@@ -2,7 +2,7 @@ import * as React from "react";
 import { graphql } from "gatsby";
 
 import Bio from "../components/bio";
-
+import Resume from "../components/resume";
 import { Layout } from "../layout";
 import "./about.scss";
 
@@ -17,6 +17,7 @@ export default function About({ data }) {
     >
       <div className="aboutContainer">
         <Bio />
+        <Resume />
       </div>
     </Layout>
   );

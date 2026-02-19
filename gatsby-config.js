@@ -116,7 +116,7 @@ module.exports = {
         background_color: "#6b37bf",
         theme_color: "#6b37bf",
         display: "standalone",
-        icon: `${__dirname}/assets/images/meta.jpeg`,
+        icon: `${__dirname}/assets/images/blog.jpeg`,
         // "src/images/favicon-32x32.png", /
       },
     },
