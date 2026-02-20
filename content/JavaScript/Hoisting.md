@@ -1,21 +1,21 @@
 ---
+
 title: "Execution Context와 Hoisting"
 date: 2025-02-03
-subtitle: ""
+subtitle: "실행 컨텍스트와 호이스팅의 동작 원리"
 category: "JavaScript"
 tags:
-  - javascript
-background: "javascript/ComputerScience.jpeg"
-emoji: "🖥️"
-draft: true
----
 
-</br>
+- javascript
+  background: "javascript/ComputerScience.jpeg"
+  emoji: "🖥️"
+  draft: true
+
 # 🔥 Execution Context란?
 
 > 자바스크립트 코드가 실행되는 환경을 추상화한 객체이다. 코드가 실행될때 필요한 환경 정보들을 모아 놓은 객체라고 할 수 있다.
 
-```jsx
+```
 1. 실행 환경을 만든다
 2. 그 안에서 코드를 실행한다
 ```
@@ -35,7 +35,7 @@ draft: true
 
 ### 실행 흐름
 
-```jsx
+```
 1. Global Execution Context 생성
 2. 변수/함수 등록
 3. 함수 호출 → Function Execution Context 생성
@@ -78,7 +78,7 @@ draft: true
 
 ### 🔎 var의 경우: undefined 출력
 
-```jsx
+```js
 console.log(a);
 var a = 10;
 ```
@@ -95,14 +95,14 @@ a: undefined
 
 **2. Execution Phase 시작** : 코드가 한 줄씩 실행된다.
 
-```jsx
+```js
 // 첫번째 줄
 console.log(a);
 ```
 
 엔진은 Execution Context의 Variable Environment에서 값이 undefined인 a를 찾아서 undefined를 출력한다.
 
-```jsx
+```js
 // 두번째 줄
 var a = 10;
 ```
@@ -123,7 +123,7 @@ a: <uninitialized>
 
 **2. Execution Phase 시작** : 코드가 한 줄씩 실행된다.
 
-```jsx
+```js
 // 첫번째 줄
 console.log(a);
 ```
@@ -136,11 +136,9 @@ console.log(a);
 | Creation Phase 초기화 | undefined            | 초기화 안 됨        |
 | 초기화 전 접근        | undefined 출력       | ReferenceError      |
 
----
-
 ### 🔎 함수의 경우: 호출 가능
 
-```jsx
+```js
 foo();
 
 function foo() {
@@ -158,7 +156,7 @@ foo: function object
 
 ### 🔎 함수 표현식의 경우: 에러 발생
 
-```jsx
+```js
 foo();
 
 var foo = function () {
@@ -181,16 +179,14 @@ foo(); → undefined is not a function ❌
 
 왜냐면 함수 객체는 아직 할당 안 됐기 때문에 에러가 발생된다.
 
----
-
 ## 🔎 조금 더 복잡한 예제
 
-```jsx
+```js
 var a = 1;
 
-functiontest() {
-	console.log(a);
-	var a = 2;
+function test() {
+  console.log(a);
+  var a = 2;
 }
 
 test();
@@ -213,10 +209,8 @@ JS는 코드를 실행하기 전에 먼저 **Global Execution Context**를 만�
 
 ```
 a: undefined
-test:function object
+test: function object
 ```
-
----
 
 ## 🔹 Global Execution Phase
 
@@ -230,13 +224,9 @@ test:function object
 a = 1
 ```
 
----
-
 ### 2️⃣ `test();`
 
 여기서 중요한 일 발생 👇
-
----
 
 # 🔥 2️⃣ test() 호출
 
@@ -245,8 +235,6 @@ a = 1
 맞아.
 
 test()가 호출되면 새로운 **Function Execution Context**가 만들어진다.
-
----
 
 ## 🔹 test 함수의 Creation Phase
 
@@ -263,8 +251,6 @@ test()가 호출되면 새로운 **Function Execution Context**가 만들어진�
 ```
 a: undefined
 ```
-
----
 
 ## 🔹 test 함수 Execution Phase
 
@@ -285,23 +271,17 @@ a: undefined
 undefined
 ```
 
----
-
 ### 2️⃣ `var a = 2`
 
 이미 a는 존재하므로 값만 할당:
 
 ```
-a =2
+a = 2
 ```
-
----
 
 # 🔥 3️⃣ test 종료
 
 Function Execution Context가 Call Stack에서 제거된다.
-
----
 
 # 🎯 전체 흐름 정리
 
