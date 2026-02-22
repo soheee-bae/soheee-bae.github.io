@@ -1,17 +1,14 @@
 ---
-
 title: "Lexical Environment와 Scope Chain"
 date: 2026-02-11
 subtitle: "변수 탐색의 핵심, 렉시컬 환경과 스코프 체인"
 category: "JavaScript"
 tags:
-
-- javascript
-  background: "javascript/ComputerScience.jpeg"
-  emoji: "🖥️"
-  draft: true
-
-# JavaScript는 어떻게 변수를 찾을까? — Lexical Environment & Scope Chain 완전 이해
+  - javascript
+background: "javascript/ComputerScience.jpeg"
+emoji: "🖥️"
+draft: true
+---
 
 JavaScript를 공부하다 보면 이런 의문이 생긴다.
 

@@ -10,8 +10,6 @@ emoji: "🖥️"
 draft: true
 ---
 
-# var / let / const의 차이 — Execution Context 관점에서 이해하기
-
 JavaScript에서 var, let, const의 차이는 단순히 문법의 차이가 아니다.
 
 많은 사람들이 이렇게 외운다.
