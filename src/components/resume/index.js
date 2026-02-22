@@ -3,11 +3,9 @@ import "./index.scss";
 
 const Resume = () => (
   <div className="resume">
-    <section className="intro">
-      <p className="tagline">
-        불확실함을 확신으로, 미국 스타트업 초기 멤버 개발자
-      </p>
-      <p className="description">
+    <section className="section">
+      <h1>불확실함을 확신으로, 미국 스타트업 초기 멤버 개발자</h1>
+      <p>
         도전적인 환경에서 비즈니스 임팩트를 만들어내는 5년 차 프론트엔드 개발자
         배소희입니다.
       </p>
@@ -15,12 +13,12 @@ const Resume = () => (
 
     <section className="section">
       <h2 className="sectionTitle">About Me</h2>
-      <p className="sectionContent">
+      <p>
         5년 차 프론트엔드 개발자로,{" "}
         <strong>미국 시드 단계 스타트업의 초기 멤버</strong>로 활동하며,{" "}
         <strong>주도적인 문제 해결</strong>을 통해 프론트엔드 개발에 대한
         전문성을 쌓았습니다. 오랜 유학 생활을 통해 얻은{" "}
-        <strong>유연한 사고와 적응력</strong>을 바탕으로
+        <strong>유연한 사고와 적응력</strong>을 바탕으로{" "}
         <strong>새로운 기술과 낯선 환경에서도 빠르게 성과</strong>를
         만들어왔습니다. 단순히 기능 구현에 그치지 않고,{" "}
         <strong>코드의 재사용성(Reusability)</strong>과{" "}
@@ -34,11 +32,15 @@ const Resume = () => (
 
     <section className="section">
       <h2 className="sectionTitle">Contact</h2>
-      <ul className="contactList">
-        <li>Email | baesohee28@gmail.com</li>
-        <li>Phone | 010 9551 7426</li>
+      <ul className="listContainer">
         <li>
-          Github |{" "}
+          <strong>Email</strong> | baesohee28@gmail.com
+        </li>
+        <li>
+          <strong>Phone</strong> | 010 9551 7426
+        </li>
+        <li>
+          <strong>Github</strong> |{" "}
           <a
             href="https://github.com/soheee-bae"
             target="_blank"
@@ -48,7 +50,7 @@ const Resume = () => (
           </a>
         </li>
         <li>
-          Blog |{" "}
+          <strong>Blog</strong> |{" "}
           <a
             href="https://soheee-bae.github.io/"
             target="_blank"
@@ -58,7 +60,7 @@ const Resume = () => (
           </a>
         </li>
         <li>
-          Linkedin |{" "}
+          <strong>Linkedin</strong> |{" "}
           <a
             href="https://www.linkedin.com/in/bae-sohee/"
             target="_blank"
@@ -68,7 +70,7 @@ const Resume = () => (
           </a>
         </li>
         <li>
-          Portfolio |{" "}
+          <strong>Portfolio</strong> |{" "}
           <a
             href="https://soheebae-dev.web.app/"
             target="_blank"
@@ -82,17 +84,12 @@ const Resume = () => (
 
     <section className="section">
       <h2 className="sectionTitle">Experience</h2>
-      <div className="experience">
-        <div className="experienceItem">
-          <h3 className="experienceCompany">Sagetap</h3>
-          <p className="experienceRole">
-            <strong>Frontend Developer - Founding Member</strong>
-          </p>
-          <p className="experiencePeriod">2021.05 ~ 2025.11</p>
-          <p className="experienceDescription">
-            5,000명 이상의 기술 전문가와 B2B SaaS 스타트업이 익명으로 만날 수
-            있도록 돕는 온라인 플랫폼 서비스{" "}
-          </p>
+      <div className="sectionContent">
+        <div className="sectionInnerItem">
+          <div className="rowItem">
+            <h4 className="subtitle">Sagetap</h4>
+            <p className="meta">2021.05 ~ 2025.11</p>
+          </div>
           <a
             className="experienceDescription"
             href="https://www.sagetap.io"
@@ -101,40 +98,48 @@ const Resume = () => (
           >
             https://www.sagetap.io
           </a>
+          <p>
+            <strong>Frontend Developer - Founding Member</strong>
+          </p>
 
-          <div className="experienceAchievements">
-            <h4 className="experienceSubtitle">
-              플랫폼 V1에서 V2로 새 플랫폼 개발, 마이그레이션 및 업그레이드
-            </h4>
-            <p className="experienceDescription">
-              <strong>
-                레거시 개선과 확장성에 초점을 맞춘 플랫폼 전면 개편
-              </strong>{" "}
-              프로젝트를 <strong>6개월간 7명의 엔지니어 팀과 협업</strong>하여
-              성공적으로 런칭했습니다.
-            </p>
-            <ul className="experienceList">
-              <li>
-                <strong>Atomic Design</strong> 원칙을 적용한{" "}
-                <strong>재사용 가능한 컴포넌트 라이브러리를 구축</strong>하여 UI
-                개발 생산성을 높이고 디자인 일관성 확보
-              </li>
-              <li>
-                <strong>기획 단계부터 디자인 팀과 긴밀히 협업</strong>하여 구현
-                타당성을 검토하고 모바일 환경에 최적화된 UI 대안 제시로{" "}
-                <strong>디자인-개발 사이클 단축</strong>
-              </li>
-              <li>
-                V2 플랫폼 런칭을 통해 스타트업과 전문가 간의{" "}
-                <strong>매칭 세션 수 110% 증가 달성</strong>
-              </li>
-            </ul>
-
-            <h4 className="experienceSubtitle">기존 제품 개선 작업</h4>
-            <h5 className="experienceSubtitleSmall">
+          <p>
+            5,000명 이상의 기술 전문가와 B2B SaaS 스타트업이 익명으로 만날 수
+            있도록 돕는 온라인 플랫폼 서비스{" "}
+          </p>
+        </div>
+        <div className="sectionItem">
+          <h4 className="subtitle">
+            플랫폼 V1에서 V2로 새 플랫폼 개발, 마이그레이션 및 업그레이드
+          </h4>
+          <p>
+            <strong>레거시 개선과 확장성에 초점을 맞춘 플랫폼 전면 개편</strong>{" "}
+            프로젝트를 <strong>6개월간 7명의 엔지니어 팀과 협업</strong>하여
+            성공적으로 런칭했습니다.
+          </p>
+          <ul className="listContainerWithDot">
+            <li>
+              <strong>Atomic Design</strong> 원칙을 적용한{" "}
+              <strong>재사용 가능한 컴포넌트 라이브러리를 구축</strong>하여 UI
+              개발 생산성을 높이고 디자인 일관성 확보
+            </li>
+            <li>
+              <strong>기획 단계부터 디자인 팀과 긴밀히 협업</strong>하여 구현
+              타당성을 검토하고 모바일 환경에 최적화된 UI 대안 제시로{" "}
+              <strong>디자인-개발 사이클 단축</strong>
+            </li>
+            <li>
+              V2 플랫폼 런칭을 통해 스타트업과 전문가 간의{" "}
+              <strong>매칭 세션 수 110% 증가 달성</strong>
+            </li>
+          </ul>
+        </div>
+        <div className="sectionItem">
+          <h4 className="subtitle">기존 제품 개선 작업</h4>
+          <div className="sectionInnerItem">
+            <h5 className="sectionInnerItemSubtitle">
               모바일 최적화 및 이탈률 감소
             </h5>
-            <ul className="experienceList">
+            <ul className="listContainerWithDot">
               <li>
                 플랫폼 전체 <strong>Mobile Optimization을 주도</strong>하며 고정
                 픽셀 값을 유동적 단위와 <strong>Tailwind CSS</strong>로 교체하여{" "}
@@ -149,11 +154,12 @@ const Resume = () => (
                 <strong>모바일 이탈률 50% 감소 (40% → 20%)</strong> 달성
               </li>
             </ul>
-
-            <h5 className="experienceSubtitleSmall">
+          </div>
+          <div className="sectionInnerItem">
+            <h5 className="sectionInnerItemSubtitle">
               안정화 전략 및 성장 기여
             </h5>
-            <ul className="experienceList">
+            <ul className="listContainerWithDot">
               <li>
                 핵심 기능 'Sage Invite' 개발시 복잡한 스펙을{" "}
                 <strong>단계별 배포(Phased Rollout)</strong> 전략으로 접근하여
@@ -167,9 +173,10 @@ const Resume = () => (
                 <strong>유저 세션 100% 증가 달성</strong>
               </li>
             </ul>
-
-            <h5 className="experienceSubtitleSmall">아키텍처 및 성능 개선</h5>
-            <ul className="experienceList">
+          </div>
+          <div className="sectionInnerItem">
+            <h5 className="sectionInnerItemSubtitle">아키텍처 및 성능 개선</h5>
+            <ul className="listContainerWithDot">
               <li>
                 더 좋은 사용자 경험을 위해 <strong>React-Query</strong>를 활용한
                 데이터 <strong>Prefetching 및 캐싱 전략</strong> 도입을 했으며{" "}
@@ -194,27 +201,13 @@ const Resume = () => (
 
     <section className="section">
       <h2 className="sectionTitle">Projects</h2>
-      <div className="projects">
-        <div className="projectItem">
-          <h3 className="projectName">TastingTable</h3>
-          <p className="projectDescription">
-            사용자들이 각자 공유하고 싶은 레시피를 사진과 글을 통해 공유하고
-            원하는 레시피를 쉽고 편리하게 찾을 수있는 레시피 공유 소셜 네트워크
-            서비스
-          </p>
-          <div className="projectTech">
-            <span className="techTag">React</span>
-            <span className="techTag">TypeScript</span>
-            <span className="techTag">SCSS</span>
-            <span className="techTag">NodeJS</span>
-            <span className="techTag">Express</span>
-            <span className="techTag">Amazon S3</span>
-            <span className="techTag">MongoDB</span>
-            <span className="techTag">Framer motion</span>
-            <span className="techTag">Netlify</span>
+      <div className="sectionContent">
+        <div className="sectionInnerItem">
+          <div className="rowItem">
+            <h4 className="subtitle">TastingTable</h4>
+            <p className="meta">1인 프로젝트 | 2023.03 ~ 2023.04</p>
           </div>
-          <p className="projectMeta">1인 프로젝트 | 2023.03 ~ 2023.04</p>
-          <div className="projectLinks">
+          <div className="linkContainer">
             <a
               href="https://github.com/soheee-bae/Tasting-Table"
               target="_blank"
@@ -230,10 +223,27 @@ const Resume = () => (
               🔗 Demo
             </a>
           </div>
-          <p className="projectNote">
+          <p>
+            사용자들이 각자 공유하고 싶은 레시피를 사진과 글을 통해 공유하고
+            원하는 레시피를 쉽고 편리하게 찾을 수있는 레시피 공유 소셜 네트워크
+            서비스
+          </p>
+          <div className="tagsContainer">
+            <span className="techTag">React</span>
+            <span className="techTag">TypeScript</span>
+            <span className="techTag">SCSS</span>
+            <span className="techTag">NodeJS</span>
+            <span className="techTag">Express</span>
+            <span className="techTag">Amazon S3</span>
+            <span className="techTag">MongoDB</span>
+            <span className="techTag">Framer motion</span>
+            <span className="techTag">Netlify</span>
+          </div>
+
+          <p className="meta">
             테스트용 아이디 & 비밀번호: tastingtable1@gmail.com / tastingtable1
           </p>
-          <ul className="projectAchievements">
+          <ul className="listContainerWithDot">
             <li>
               <strong>MERN 스택</strong> (Node.js, Express, MongoDB)을 활용하여{" "}
               <strong>기획부터 디자인, API 설계까지</strong> 전체 개발 과정을
@@ -251,22 +261,12 @@ const Resume = () => (
           </ul>
         </div>
 
-        <div className="projectItem">
-          <h3 className="projectName">Filmacorn</h3>
-          <p className="projectDescription">
-            영화를 쉽게 찾아보고 자세한 정보를 제공하며 회원가입과 로그인을
-            통해서 원하는 영화 리스트를 보관하고 저장할 수 있는 서비스
-          </p>
-          <div className="projectTech">
-            <span className="techTag">React</span>
-            <span className="techTag">TypeScript</span>
-            <span className="techTag">SCSS</span>
-            <span className="techTag">Next.js</span>
-            <span className="techTag">TMDB API</span>
-            <span className="techTag">Lazy loading</span>
+        <div className="sectionInnerItem">
+          <div className="rowItem">
+            <h4 className="subtitle">Filmacorn</h4>
+            <p className="meta">1인 프로젝트 | 2023.02 ~ 2023.03</p>
           </div>
-          <p className="projectMeta">1인 프로젝트 | 2023.02 ~ 2023.03</p>
-          <div className="projectLinks">
+          <div className="linkContainer">
             <a
               href="https://github.com/soheee-bae/Filmacorn"
               target="_blank"
@@ -282,7 +282,20 @@ const Resume = () => (
               🔗 Demo
             </a>
           </div>
-          <ul className="projectAchievements">
+          <p>
+            영화를 쉽게 찾아보고 자세한 정보를 제공하며 회원가입과 로그인을
+            통해서 원하는 영화 리스트를 보관하고 저장할 수 있는 서비스
+          </p>
+          <div className="tagsContainer">
+            <span className="techTag">React</span>
+            <span className="techTag">TypeScript</span>
+            <span className="techTag">SCSS</span>
+            <span className="techTag">Next.js</span>
+            <span className="techTag">TMDB API</span>
+            <span className="techTag">Lazy loading</span>
+          </div>
+
+          <ul className="listContainerWithDot">
             <li>
               기존 JavaScript 기반의 Next.js 코드를{" "}
               <strong>TypeScript로 전환</strong>하여{" "}
@@ -301,23 +314,15 @@ const Resume = () => (
           </ul>
         </div>
 
-        <div className="projectItem">
-          <h3 className="projectName">Gatsby Blog Starter</h3>
-          <p className="projectDescription">
-            Gatsby를 이용한 개인 블로그 또는 개발 블로그를 운영하고 싶은
-            사람들을 대상으로 한 블로그 스타터 탬플릿
-          </p>
-          <div className="projectTech">
-            <span className="techTag">Gatsby</span>
-            <span className="techTag">Graphql</span>
-            <span className="techTag">React</span>
-            <span className="techTag">SCSS</span>
+        <div className="sectionInnerItem">
+          <div className="rowItem">
+            <h4 className="subtitle">Gatsby Blog Starter</h4>
+            <p className="meta">
+              1인 프로젝트 | 2023.01 ~ 2023.02, 2023.03 ~ 2023.04
+            </p>
           </div>
-          <p className="projectMeta">
-            1인 프로젝트 | 2023.01 ~ 2023.02, 2023.03 ~ 2023.04
-          </p>
-          <div className="projectLinks">
-            <div className="projectVersion">
+          <div className="linkContainer">
+            <div className="linkContainer">
               <span>v1.</span>
               <a
                 href="https://github.com/soheee-bae/Gatsby-Clean-Blog-Starter"
@@ -334,7 +339,7 @@ const Resume = () => (
                 🔗 Demo
               </a>
             </div>
-            <div className="projectVersion">
+            <div className="linkContainer">
               <span>v2.</span>
               <a
                 href="https://github.com/soheee-bae/Gatsby-Image-Blog-Starter"
@@ -352,7 +357,18 @@ const Resume = () => (
               </a>
             </div>
           </div>
-          <ul className="projectAchievements">
+          <p>
+            Gatsby를 이용한 개인 블로그 또는 개발 블로그를 운영하고 싶은
+            사람들을 대상으로 한 블로그 스타터 탬플릿
+          </p>
+          <div className="tagsContainer">
+            <span className="techTag">Gatsby</span>
+            <span className="techTag">Graphql</span>
+            <span className="techTag">React</span>
+            <span className="techTag">SCSS</span>
+          </div>
+
+          <ul className="listContainerWithDot">
             <li>
               <strong>Context API와 커스텀 훅을 도입</strong>하여 컴포넌트 간{" "}
               <strong>복잡한 데이터 전달 문제(Props Drilling)</strong>를
@@ -375,33 +391,35 @@ const Resume = () => (
 
     <section className="section">
       <h2 className="sectionTitle">Skills</h2>
-      <div className="skills">
-        <div className="skillCategory">
+      <ul className="listContainer">
+        <li>
           <strong>Frontend:</strong> JavaScript, TypeScript, React, Next.js,
           React-Query, Tailwind CSS, Storybook
-        </div>
-        <div className="skillCategory">
+        </li>
+        <li>
           <strong>Back-end:</strong> Node.js, Express, AWS
-        </div>
-        <div className="skillCategory">
+        </li>
+        <li>
           <strong>Collaboration:</strong> Git, Jira, Linear
-        </div>
-      </div>
+        </li>
+      </ul>
     </section>
 
     <section className="section">
       <h2 className="sectionTitle">Education</h2>
-      <div className="education">
-        <h3 className="educationSchool">University of Alaska Anchorage</h3>
-        <p className="educationPeriod">2015.08 ~ 2020.12</p>
-        <p className="educationDegree">Bachelor of Science, Computer Science</p>
-        <p className="educationGpa">GPA: 3.66 / 4.0 (Cum laude)</p>
+      <div className="listContainer">
+        <div className="educationItem">
+          <h3 className="subtitle">University of Alaska Anchorage</h3>
+          <li>2015.08 ~ 2020.12</li>
+        </div>
+        <li>Bachelor of Science, Computer Science</li>
+        <li>GPA: 3.66 / 4.0 (Cum laude)</li>
       </div>
     </section>
 
     <section className="section">
       <h2 className="sectionTitle">Languages</h2>
-      <ul className="languages">
+      <ul className="listContainer">
         <li>
           <strong>English:</strong> Professional Working Proficiency
         </li>

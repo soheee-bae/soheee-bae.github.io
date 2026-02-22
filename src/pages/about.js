@@ -17,6 +17,7 @@ export default function About({ data }) {
     >
       <div className="aboutContainer">
         <Bio />
+        <div className="divider" />
         <Resume />
       </div>
     </Layout>

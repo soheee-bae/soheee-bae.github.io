@@ -297,7 +297,7 @@ a: undefined
 
 <br/>
 
-### 3. test 종료
+### 3. test() 종료
 
 Function Execution Context가 Call Stack에서 제거된다.
 
