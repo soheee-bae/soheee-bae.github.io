@@ -98,9 +98,7 @@ draft: false
 
 > “선언이 위로 끌어올려진 것처럼 보이는 현상”
 
-하지만 실제로는:
-
-> **Creation Phase에서 선언이 미리 등록**되었기 때문에 그렇게 보이는 것이다.
+하지만 실제로는 **Creation Phase에서 선언이 미리 등록**되었기 때문에 그렇게 보이는 것이다.
 
 <br/>
 
@@ -307,7 +305,7 @@ Function Execution Context가 Call Stack에서 제거된다.
 
 <br/>
 
-## 🎯 전체 흐름 정리
+## 🧶 전체 흐름 정리
 
 ```
 GlobalExecutionContext 생성

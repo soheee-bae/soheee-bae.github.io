@@ -24,7 +24,7 @@
     background: var(--lg-darker-white);
     width: 100%;
     padding: 0px 10px;
-    font-size: var(--text-sm);
+    font-size: var(--text-base);
     color: var(--lg-darkest-gray);
   }
   code {
@@ -47,5 +47,28 @@
   video {
     border-radius: 8px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: var(--text-sm);
+    table-layout: fixed;
+
+    th,
+    td {
+      border: 1px solid var(--lg-lightest-gray);
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    th {
+      background-color: var(--lg-darker-white);
+      font-weight: 600;
+    }
   }
 }
