@@ -3,8 +3,7 @@ import { navigate } from "gatsby";
 import qs from "query-string";
 
 import "./index.scss";
-import { ChevronLeft } from "../../../assets/icons/chevronLeft";
-import { ChevronRight } from "../../../assets/icons/chevronRight";
+import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 
 const PostNavigation = ({ data, selectedCategory }) => {
   const { next, previous } = data;
@@ -25,7 +24,7 @@ const PostNavigation = ({ data, selectedCategory }) => {
       >
         {previous && (
           <div className="postNavButton">
-            <ChevronLeft />
+            <LuChevronLeft />
             <p>{preTitle}</p>
           </div>
         )}
@@ -38,7 +37,7 @@ const PostNavigation = ({ data, selectedCategory }) => {
         {next && (
           <div className="postNavButton">
             <p>{nextTitle}</p>
-            <ChevronRight />
+            <LuChevronRight />
           </div>
         )}
       </div>

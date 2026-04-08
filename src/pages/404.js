@@ -1,6 +1,6 @@
 import { navigate } from "gatsby";
 import * as React from "react";
-import { FaceFrown } from "../../assets/icons/faceFrown";
+import { LuFrown } from "react-icons/lu";
 import "./404Page.scss";
 
 export default function Components() {
@@ -8,7 +8,7 @@ export default function Components() {
     <div className="errorRoot">
       <div className="errorNavbar" />
       <div className="errorContent">
-        <FaceFrown />
+        <LuFrown />
         <div className="errorTitle">Page not found</div>
         <div className="errorText">
           Opps! The page you are looking does not exist.

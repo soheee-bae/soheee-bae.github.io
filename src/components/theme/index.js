@@ -3,8 +3,7 @@ import { THEME } from "../../constants";
 import { getTheme, setTheme } from "../../utils";
 import { setDarkTheme, setLightTheme } from "../../utils/theme";
 
-import LightOn from "../../../assets/icons/lightOn";
-import LightOff from "../../../assets/icons/lightOff";
+import { LuSun, LuMoon } from "react-icons/lu";
 
 import "./index.scss";
 
@@ -40,21 +39,14 @@ const Theme = ({ checked, setChecked, scrollTriggered }) => {
       onClick={() => handleSwitch(!checked)}
     >
       {checked ? (
-        <LightOn
-          width={28}
-          height={28}
-          strokeWidth={2}
+        <LuSun
+          size={28}
           color={
             scrollTriggered ? "var(--default-black)" : "var(--default-white)"
           }
         />
       ) : (
-        <LightOff
-          width={23}
-          height={23}
-          strokeWidth={2.5}
-          color="var(--default-white)"
-        />
+        <LuMoon size={23} color="var(--default-white)" />
       )}
     </div>
   );

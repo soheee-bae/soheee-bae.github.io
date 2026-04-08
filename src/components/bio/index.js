@@ -3,9 +3,8 @@ import Image from "gatsby-image";
 import { graphql, useStaticQuery } from "gatsby";
 
 import "./index.scss";
-import { Email } from "../../../assets/icons/email";
-import { LinkedIn } from "../../../assets/icons/linkedIn";
-import { Github } from "../../../assets/icons/github";
+import { LuMail } from "react-icons/lu";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Bio = () => {
   const bioQuery = useStaticQuery(graphql`
@@ -48,13 +47,13 @@ const Bio = () => {
         <p className="bioText">{bio}</p>
         <div className="bioIcons">
           <a href={emailUrl} target="_blank">
-            <Email color="var(--lg-light-black)" />
+            <LuMail color="var(--lg-light-black)" />
           </a>
           <a href={githubUrl} target="_blank">
-            <Github color="var(--lg-light-black)" />
+            <FaGithub color="var(--lg-light-black)" />
           </a>
           <a href={linkedInUrl} target="_blank">
-            <LinkedIn color="var(--lg-light-black)" />
+            <FaLinkedin color="var(--lg-light-black)" />
           </a>
         </div>
       </div>

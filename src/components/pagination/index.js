@@ -1,6 +1,5 @@
 import React from "react";
-import { ChevronLeft } from "../../../assets/icons/chevronLeft";
-import { ChevronRight } from "../../../assets/icons/chevronRight";
+import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { DOTS } from "../../constants/page";
 import "./index.scss";
 
@@ -29,7 +28,7 @@ export const Pagination = (props) => {
           data-disabled={currentPage === 1}
           onClick={handlePrev}
         >
-          <ChevronLeft />
+          <LuChevronLeft />
         </li>
         <ul className="paginationPages">
           {paginationRange?.map((page, index) => {
@@ -53,7 +52,7 @@ export const Pagination = (props) => {
           data-disabled={currentPage === lastPage}
           onClick={handleNext}
         >
-          <ChevronRight />
+          <LuChevronRight />
         </li>
       </ul>
     </div>

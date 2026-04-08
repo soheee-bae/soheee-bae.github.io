@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
-import { Search } from "../../../assets/icons/search";
+import { LuSearch } from "react-icons/lu";
 
 export const SearchField = ({ setSearch, handlePageChange }) => {
   var typewatch = (function () {
@@ -13,7 +13,7 @@ export const SearchField = ({ setSearch, handlePageChange }) => {
 
   return (
     <div className="search">
-      <Search color="var(--lg-darkest-gray)" />
+      <LuSearch color="var(--lg-darkest-gray)" />
       <input
         type="text"
         placeholder="검색어"

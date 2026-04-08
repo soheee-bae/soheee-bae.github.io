@@ -1,8 +1,7 @@
 import React from "react";
 import "./index.scss";
 import { format } from "date-fns";
-import { Calendar } from "../../../assets/icons/calendar";
-import { Book } from "../../../assets/icons/book";
+import { LuCalendar, LuBookOpen } from "react-icons/lu";
 
 export const HeaderContent = ({
   title,
@@ -23,21 +22,13 @@ export const HeaderContent = ({
         <div className="headerDetails">
           {category && (
             <p className="headerDetail">
-              <Book
-                width={16}
-                height={16}
-                color="var(--default-darker-white)"
-              />
+              <LuBookOpen size={16} color="var(--default-darker-white)" />
               {category}
             </p>
           )}
           {date && (
             <p className="headerDetail">
-              <Calendar
-                width={16}
-                height={16}
-                color="var(--default-darker-white)"
-              />
+              <LuCalendar size={16} color="var(--default-darker-white)" />
               {format(new Date(date), "MMMM dd yyyy")}
             </p>
           )}
