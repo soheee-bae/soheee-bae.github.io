@@ -60,7 +60,7 @@ watchlist라는 영화 리스트 보관 서비스를 개발 하고 싶었기에 
 
 <div style="width:100%; margin:auto; text-align:center;">
 
-![filmacorn파일구조도](../../assets/images/project/Filmacorn/filmacornFiles.png)
+![filmacorn파일구조도](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/Filmacorn/filmacornFiles)
 
 ##### 파일 구조도
 
@@ -76,7 +76,7 @@ watchlist라는 영화 리스트 보관 서비스를 개발 하고 싶었기에 
 
 <div style="width:100%; margin:auto; text-align:center;">
 
-![filmacornDesignI](../../assets/images/project/Filmacorn/filmacornDesignI.png)
+![filmacornDesignI](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/Filmacorn/filmacornDesignI)
 
 ##### 메인 페이지
 
@@ -84,7 +84,7 @@ watchlist라는 영화 리스트 보관 서비스를 개발 하고 싶었기에 
 
 <div style="width:100%; margin:auto; text-align:center;">
 
-![filmacornDesignII](../../assets/images/project/Filmacorn/filmacornDesignII.png)
+![filmacornDesignII](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/Filmacorn/filmacornDesignII)
 
 ##### 영화 디테일 페이지
 

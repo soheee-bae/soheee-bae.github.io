@@ -15,7 +15,7 @@ draft: false
 
 <div style="width:100%; margin:auto; text-align:center;">
 
-![gatsbyBlog라이트모드](../../assets/images/project/gatsbyBlog/gatsbyBlogStarterLight.png)
+![gatsbyBlog라이트모드](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/gatsbyBlog/gatsbyBlogStarterLight)
 
 ##### 라이트모드
 
@@ -23,7 +23,7 @@ draft: false
 
 <div style="width:100%; margin:auto; text-align:center;">
 
-![gatsbyBlog다크모드](../../assets/images/project/gatsbyBlog/gatsbyBlogStarterDark.png)
+![gatsbyBlog다크모드](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/gatsbyBlog/gatsbyBlogStarterDark)
 
 ##### 다크모드
 

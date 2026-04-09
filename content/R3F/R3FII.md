@@ -31,7 +31,7 @@ extend({ OrbitControls })
 
 <div style="width:100%; margin:auto; text-align:center;">
 
-![useThreeState](../../assets/images/r3f/r3f-useThreeState.png)
+![useThreeState](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/r3f/r3f-useThreeState)
 
 ##### useThree()의 값
 
@@ -52,7 +52,7 @@ export default function Experience(){
 
 위의 코드를 실행하면 밑과 같은 기능이 적용됩니다.
 
-<video src="../../assets/videos/r3f/r3f-orbitcontrols.mp4" controls="controls" style="width:100%"></video>
+<video src="https://res.cloudinary.com/dh012rexm/video/upload/f_auto,q_auto/soheee-bae-site/r3f/r3f-orbitcontrols" controls="controls" style="width:100%"></video>
 
 </br>
 
@@ -128,7 +128,7 @@ export default function CustomObject()
 
 <div style="width:100%; margin:auto;">
 
-![bufferGeometry](../../assets/images/r3f/r3f-bufferGeometry.png)
+![bufferGeometry](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/r3f/r3f-bufferGeometry)
 
 </div>
 
@@ -159,7 +159,7 @@ import * as THREE from 'three' 또는 import { DoubleSide } from 'three'
 
 <div style="width:100%; margin:auto;">
 
-![withoutNormal](../../assets/images/r3f/r3f-withoutNormal.png)
+![withoutNormal](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/r3f/r3f-withoutNormal)
 
 </div>
 
@@ -185,7 +185,7 @@ export default function CustomObject(){
 
 위의 코드를 실행하면 밑과 같은 화면처럼 만든 형상에 빛에 반응하는 재질이 적용됩니다.
 
-<video src="../../assets/videos/r3f/rf3-doubleSide.mp4" controls="controls" style="width:100%"></video>
+<video src="https://res.cloudinary.com/dh012rexm/video/upload/f_auto,q_auto/soheee-bae-site/r3f/rf3-doubleSide" controls="controls" style="width:100%"></video>
 
 </br>
 
@@ -235,4 +235,4 @@ useFrame((state, delta) => {
 
 위의 코드를 실행하면 밑과 같은 애니메이션이 적용됩니다.
 
-<video src="../../assets/videos/r3f/rf3-cameraRotation.mp4" controls="controls" style="width:100%"></video>
+<video src="https://res.cloudinary.com/dh012rexm/video/upload/f_auto,q_auto/soheee-bae-site/r3f/rf3-cameraRotation" controls="controls" style="width:100%"></video>

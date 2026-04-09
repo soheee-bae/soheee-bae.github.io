@@ -60,7 +60,7 @@ draft: false
 
 <div style="width:100%; margin:auto; text-align:center;">
 
-![gatsbyBlog파일구조도](../../assets/images/project/gatsbyBlog/gatsbyBlogFiles.png)
+![gatsbyBlog파일구조도](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/gatsbyBlog/gatsbyBlogFiles)
 
 ##### 파일 구조도
 
@@ -68,7 +68,7 @@ draft: false
 
 <div style="width:100%; margin:auto; text-align:center;">
 
-![gatsbyBlog메뉴구조도](../../assets/images/project/gatsbyBlog/gatsbyBogMenus.png)
+![gatsbyBlog메뉴구조도](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/gatsbyBlog/gatsbyBogMenus)
 
 ##### 메뉴 구조도
 
@@ -86,7 +86,7 @@ draft: false
 
 <div style="width:100%; margin:auto; text-align:center;">
 
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog//gatsbyBlogDesignI.png)
+![gatsbyBlogDesignI](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/gatsbyBlog//gatsbyBlogDesignI)
 
 ##### 메인 페이지 + 목차
 
@@ -94,7 +94,7 @@ draft: false
 
 <div style="width:100%; margin:auto; text-align:center;">
 
-![gatsbyBlogDesignII](../../assets/images/project/gatsbyBlog/gatsbyBlogDesignII.png)
+![gatsbyBlogDesignII](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/gatsbyBlog/gatsbyBlogDesignII)
 
 ##### 게시글 디테일 페이지
 

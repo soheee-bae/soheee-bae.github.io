@@ -27,7 +27,7 @@ draft: false
 
 <div style="width:100%; margin:auto;">
 
-![브라우저렌더링구조](../../assets/images/javascript/브라우저렌더링구조.png)
+![브라우저렌더링구조](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/javascript/브라우저렌더링구조)
 
 </div>
 
@@ -53,7 +53,7 @@ draft: false
 
 <div style="width:100%; margin:auto;">
 
-![브라우저렌더링경로](../../assets/images/javascript/브라우저렌더링경로.png)
+![브라우저렌더링경로](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/javascript/브라우저렌더링경로)
 
 </div>
 
@@ -63,7 +63,7 @@ draft: false
 
 <div style="width:100%; margin:auto;">
 
-![브라우저렌더링dom](../../assets/images/javascript/브라우저렌더링dom.png)
+![브라우저렌더링dom](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/javascript/브라우저렌더링dom)
 
 </div>
 
@@ -71,7 +71,7 @@ draft: false
 
 <div style="width:100%; margin:auto;">
 
-![브라우저렌더링dom](../../assets/images/javascript/브라우저렌더링dom.png)
+![브라우저렌더링dom](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/javascript/브라우저렌더링dom)
 
 </div>
 
@@ -81,7 +81,7 @@ draft: false
 
 <div style="width:100%; margin:auto;">
 
-![브라우저렌더링렌더트리](../../assets/images/javascript/브라우저렌더링렌더트리.png)
+![브라우저렌더링렌더트리](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/javascript/브라우저렌더링렌더트리)
 
 </div>
 

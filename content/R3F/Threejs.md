@@ -24,7 +24,7 @@ React Three Fiber에 대해 깊게 알아보기 전에 간단히 Three.js에 대
 
 <div style="width:100%; margin:auto;">
 
-![threejsbasic](../../assets/images/r3f/r3f-threejsbasic.png)
+![threejsbasic](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/r3f/r3f-threejsbasic)
 
 </div>
 

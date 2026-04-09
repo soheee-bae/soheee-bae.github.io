@@ -25,25 +25,25 @@ draft: false
 
 <div style="float:left; width:48%; margin:auto; text-align:center;">
 
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_MainLight.png)
+![gatsbyBlogDesignI](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/gatsbyBlog/Blog_MainLight)
 
 </div>
 
 <div style="float:right; width:48%; margin:auto; text-align:center;">
 
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_Main2Light.png)
+![gatsbyBlogDesignI](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/gatsbyBlog/Blog_Main2Light)
 
 </div>
 
 <div style="float:left; width:48%; margin:auto; text-align:center;">
 
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_PostsLight.png)
+![gatsbyBlogDesignI](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/gatsbyBlog/Blog_PostsLight)
 
 </div>
 
 <div style="float:right; width:48%; margin:auto; text-align:center;">
 
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_Posts2Light.png)
+![gatsbyBlogDesignI](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/gatsbyBlog/Blog_Posts2Light)
 
 </div>
 
@@ -59,25 +59,25 @@ draft: false
 
 <div style="float:left; width:48%; margin:auto; text-align:center;">
 
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_MainDark.png)
+![gatsbyBlogDesignI](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/gatsbyBlog/Blog_MainDark)
 
 </div>
 
 <div style="float:right; width:48%; margin:auto; text-align:center;">
 
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_Main2Dark.png)
+![gatsbyBlogDesignI](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/gatsbyBlog/Blog_Main2Dark)
 
 </div>
 
 <div style="float:left; width:48%; margin:auto; text-align:center;">
 
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_PostsDark.png)
+![gatsbyBlogDesignI](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/gatsbyBlog/Blog_PostsDark)
 
 </div>
 
 <div style="float:right; width:48%; margin:auto; text-align:center;">
 
-![gatsbyBlogDesignI](../../assets/images/project/gatsbyBlog/Blog_Posts2Dark.png)
+![gatsbyBlogDesignI](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/gatsbyBlog/Blog_Posts2Dark)
 
 </div>
 
@@ -103,7 +103,7 @@ draft: false
 
 <div style="width:100%; margin:auto; text-align:center;">
 
-![gatsbyBlogFiltering](../../assets/images/project/gatsbyBlog/gatsbyBlogFiltering.png)
+![gatsbyBlogFiltering](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/project/gatsbyBlog/gatsbyBlogFiltering)
 
 </div>
 

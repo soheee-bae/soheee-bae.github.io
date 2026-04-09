@@ -15,14 +15,18 @@
     "prettier": "prettier --write \"./**/*.{js,jsx,json,md}\"",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "check-assets": "node scripts/optimize-images.js",
-    "find-unused-assets": "node scripts/find-unused-assets.js"
+    "find-unused-assets": "node scripts/find-unused-assets.js",
+    "upload-cloudinary-assets": "node scripts/upload-cloudinary-assets.js",
+    "rewrite-assets-cloudinary": "node scripts/rewrite-assets-to-cloudinary.js"
   },
   "dependencies": {
     "@mdx-js/mdx": "^2.2.1",
     "@mdx-js/react": "^2.2.1",
     "babel-plugin-styled-components": "^2.0.7",
     "clsx": "^1.2.1",
+    "cloudinary": "^2.7.0",
     "date-fns": "^2.29.3",
+    "dotenv": "^16.6.1",
     "file-loader": "^6.2.0",
     "gatsby": "^5.5.0",
     "gatsby-image": "^3.11.0",

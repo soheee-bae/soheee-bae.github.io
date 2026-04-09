@@ -47,7 +47,7 @@ GPU는 <b>Graphic Processing Unit</b>의 약자로 위에서 말했듯이 렌더
 
 <div style="width:250px; margin:auto;">
 
-![절레](../../assets/images/r3f/절레.jpeg)
+![절레](https://res.cloudinary.com/dh012rexm/image/upload/f_auto,q_auto/soheee-bae-site/r3f/절레)
 
 </div>
 
