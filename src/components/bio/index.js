@@ -1,21 +1,14 @@
 import React from "react";
-import Image from "gatsby-image";
 import { graphql, useStaticQuery } from "gatsby";
 
 import "./index.scss";
 import { LuMail } from "react-icons/lu";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { cloudinaryImageUrl } from "../../utils/cloudinary";
 
 const Bio = () => {
   const bioQuery = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(relativePath: { regex: "/profile.jpeg/" }) {
-        childImageSharp {
-          fixed(width: 100, height: 100) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
       site {
         siteMetadata {
           author
@@ -30,14 +23,17 @@ const Bio = () => {
   `);
   const { author, bio, githubUrl, linkedInUrl, emailUrl } =
     bioQuery.site.siteMetadata;
+  const avatarSrc = cloudinaryImageUrl("profile.jpeg");
 
   return (
     <div className="bioContainer">
       <div className="bioImage">
-        <Image
-          fixed={bioQuery.avatar.childImageSharp.fixed}
+        <img
+          src={avatarSrc || ""}
+          width={100}
+          height={100}
           alt={author}
-          fadeIn={true}
+          loading="lazy"
         />
       </div>
       <div className="bioContent">

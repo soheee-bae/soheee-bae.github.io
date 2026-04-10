@@ -14,6 +14,11 @@ const ASSETS_DIR = path.join(__dirname, "../assets");
 const CONTENT_DIR = path.join(__dirname, "../content");
 const SRC_DIR = path.join(__dirname, "../src");
 
+if (!fs.existsSync(ASSETS_DIR)) {
+  console.log("No assets/ directory — nothing to scan.\n");
+  process.exit(0);
+}
+
 function getAllFiles(dir, fileList = []) {
   const files = fs.readdirSync(dir);
 

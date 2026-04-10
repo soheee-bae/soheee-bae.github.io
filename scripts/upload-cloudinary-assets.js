@@ -68,10 +68,17 @@ async function main() {
   const imagesRoot = path.join(repoRoot, "assets/images");
   const videosRoot = path.join(repoRoot, "assets/videos");
 
-  const imageFiles = getAllFiles(imagesRoot).filter((f) =>
+  if (!fs.existsSync(imagesRoot) && !fs.existsSync(videosRoot)) {
+    console.log("No assets/images or assets/videos directories — nothing to upload.");
+    process.exit(0);
+  }
+
+  const imageFiles = (fs.existsSync(imagesRoot) ? getAllFiles(imagesRoot) : []).filter((f) =>
     /\.(png|jpe?g|gif|webp|svg)$/i.test(f)
   );
-  const videoFiles = getAllFiles(videosRoot).filter((f) => /\.(mp4|webm|mov)$/i.test(f));
+  const videoFiles = (fs.existsSync(videosRoot) ? getAllFiles(videosRoot) : []).filter((f) =>
+    /\.(mp4|webm|mov)$/i.test(f)
+  );
 
   const all = [
     ...imageFiles.map((fullPath) => ({ fullPath, root: imagesRoot, resource_type: "image" })),

@@ -15,6 +15,11 @@ const path = require("path");
 const ASSETS_DIR = path.join(__dirname, "../assets/images");
 const MAX_FILE_SIZE = 500 * 1024; // 500KB - flag files larger than this
 
+if (!fs.existsSync(ASSETS_DIR)) {
+  console.log("No assets/images directory — skipping.\n");
+  process.exit(0);
+}
+
 function getFileSize(filePath) {
   const stats = fs.statSync(filePath);
   return stats.size;

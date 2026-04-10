@@ -18,8 +18,13 @@ function joinPath(...parts) {
     .join("/");
 }
 
+/** Public defaults so builds work without env (overridable via GATSBY_*). */
+const DEFAULT_CLOUD_NAME = "dh012rexm";
+const DEFAULT_FOLDER = "soheee-bae-site";
+
 function cloudinaryUrl({ resourceType, publicId, transforms }) {
-  const cloudName = process.env.GATSBY_CLOUDINARY_CLOUD_NAME;
+  const cloudName =
+    process.env.GATSBY_CLOUDINARY_CLOUD_NAME || DEFAULT_CLOUD_NAME;
   if (!cloudName) return null;
 
   const safeTransforms = transforms?.length ? transforms.join(",") : null;
@@ -32,7 +37,7 @@ export function cloudinaryImageUrl(assetPath, opts = {}) {
   if (!assetPath || typeof assetPath !== "string") return null;
   if (isRemoteUrl(assetPath)) return assetPath;
 
-  const folder = process.env.GATSBY_CLOUDINARY_FOLDER || "";
+  const folder = process.env.GATSBY_CLOUDINARY_FOLDER ?? DEFAULT_FOLDER;
   const normalized = stripLeadingSlashes(assetPath);
   const publicId = joinPath(folder, stripExtension(normalized));
 
@@ -47,7 +52,7 @@ export function cloudinaryVideoUrl(assetPath, opts = {}) {
   if (!assetPath || typeof assetPath !== "string") return null;
   if (isRemoteUrl(assetPath)) return assetPath;
 
-  const folder = process.env.GATSBY_CLOUDINARY_FOLDER || "";
+  const folder = process.env.GATSBY_CLOUDINARY_FOLDER ?? DEFAULT_FOLDER;
   const normalized = stripLeadingSlashes(assetPath);
   const publicId = joinPath(folder, stripExtension(normalized));
 

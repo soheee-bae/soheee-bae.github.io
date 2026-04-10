@@ -67,18 +67,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/assets/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/assets/videos`,
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         gfm: true,
@@ -111,19 +99,6 @@ module.exports = {
 
           `gatsby-remark-copy-linked-files`,
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: "xxx",
-        short_name: "xxxx",
-        start_url: "/",
-        background_color: "#6b37bf",
-        theme_color: "#6b37bf",
-        display: "standalone",
-        icon: `${__dirname}/assets/images/blog.jpeg`,
-        // "src/images/favicon-32x32.png", /
       },
     },
     `gatsby-plugin-image`,
