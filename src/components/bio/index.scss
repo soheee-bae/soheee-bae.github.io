@@ -21,6 +21,8 @@
     border-radius: 50%;
     width: 91px !important;
     height: 91px !important;
+    object-fit: cover;
+    object-position: center;
     border: 2px solid var(--lg-lighter-gray);
     padding: 2px;
   }
